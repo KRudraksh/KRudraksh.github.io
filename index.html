@@ -1,11 +1,16 @@
 <!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
 <html class="no-js" lang="en">
+<!--<![endif]-->
+
 <head>
 
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Ceevee 2.0</title>
+    <title>Hola</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -15,726 +20,577 @@
 
     <!-- CSS
     ================================================== -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
 
     <!-- script
     ================================================== -->
-    <script defer src="js/vendor/fontawesome/all.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
 
     <!-- favicons
     ================================================== -->
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 
-<body id="top" class="ss-preload">
-
-
-    <!-- preloader
-    ================================================== -->
-    <div id="preloader">
-        <div id="loader"></div>
-    </div>
-
+<body id="top">
 
     <!-- header
     ================================================== -->
     <header class="s-header">
-        <div class="row s-header__nav-wrap">
-            <nav class="s-header__nav">
-                <ul>
-                    <li class="current"><a class="smoothscroll" href="#hero">Home</a></li>
-                    <li><a class="smoothscroll" href="#about">About</a></li>
-                    <li><a class="smoothscroll" href="#resume">Resume</a></li>
-                    <li><a class="smoothscroll" href="#portfolio">Works</a></li>
-                    <li><a class="smoothscroll" href="#testimonials">Testimonials</a></li>
-                    <li><a class="smoothscroll" href="#contact">Say Hello</a></li>
-                </ul>
-            </nav>
-        </div> <!-- end row -->
-        
-        <a class="s-header__menu-toggle" href="#0" title="Menu">
-            <span class="s-header__menu-icon"></span>
-        </a>
+
+        <div class="header-logo">
+            <a class="site-logo" href="index.html"><img src="images/logo.png" alt="Homepage"></a>
+        </div>
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
+                <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
+                <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
+                <li><a class="smoothscroll"  href="#blog" title="blog">Blog</a></li>
+                <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
     </header> <!-- end s-header -->
 
 
-    <!-- hero
-    ================================================== -->
-    <section id="hero" class="s-hero target-section">
+   <!-- home
+   ================================================== -->
+   <section id="home" class="s-home page-hero target-section" data-parallax="scroll" data-image-src="images/count-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
-        <div class="s-hero__bg rellax" data-rellax-speed="-7"></div>
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
 
-        <div class="row s-hero__content">
-            <div class="column">
+        <div class="home-content">
 
-                <div class="s-hero__content-about">
+            <div class="row home-content__main">
 
-                    <h1>I'm Jonathan Doe.</h1>
+                <h3>Hello There</h3>
 
-                    <h3>
-                    I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
-                    effective visual identities for companies of all sizes around the globe. Let's <a class="smoothscroll" href="#about">start scrolling</a>
-                    and learn more <a class="smoothscroll" href="#about">about me</a>.
-                    </h3>
+                <h1>
+                    I am Rudraksh Kuchiya. <br>
+                    I am a Robotics Engineer <br>
+                    based in IIT Bombay.
+                </h1>
 
-                    <div class="s-hero__content-social">
-                        <a href="#0"><i class="fab fa-facebook-square" aria-hidden="true"></i></a>
-                        <a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a>
-                        <a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a>
-                        <a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a>
-                        <a href="#0"><i class="fab fa-behance" aria-hidden="true"></i></a>
-                        <a href="#0"><i class="fab fa-linkedin" aria-hidden="true"></i></a>
-                    </div>
+                <div class="home-content__buttons">
+                    <a href="#works" class="smoothscroll btn btn--stroke">
+                        Latest Projects
+                    </a>
+                    <a href="#about" class="smoothscroll btn btn--stroke">
+                        More About Me
+                    </a>
+                </div>
 
-                </div> <!-- end s-hero__content-about -->
+                <div class="home-content__scroll">
+                    <a href="#about" class="scroll-link smoothscroll">
+                        <span>Scroll Down</span>
+                    </a>
+                </div>
 
             </div>
-        </div> <!-- s-hero__content -->
 
-        <div class="s-hero__scroll">
-            <a href="#about" class="s-hero__scroll-link smoothscroll">
-                <span class="scroll-arrow">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M18.707 12.707L17.293 11.293 13 15.586 13 6 11 6 11 15.586 6.707 11.293 5.293 12.707 12 19.414z"></path></svg>
-                </span>
-                <span class="scroll-text">Scroll Down</span>
-            </a>
-        </div> <!-- s-hero__scroll -->
+        </div> <!-- end home-content -->
 
-    </section> <!-- end s-hero -->
+        <ul class="home-social">
+            <!-- <li>
+                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
+            </li> -->
+            <li>
+                <a href=https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+            </li>
+            <li>
+                <a href=https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+            </li>
+            <li>
+                <a href=https://github.com/KRudraksh><i class="im im-github" aria-hidden="true"></i><span>Github</span></a>
+            </li>
+            <!-- <li>
+                <a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
+            </li> -->
+        </ul> 
+        <!-- end home-social -->
+
+    </section> <!-- end s-home -->
 
 
     <!-- about
     ================================================== -->
     <section id="about" class="s-about target-section">
-
-        <div class="row">
-            <div class="column large-3 tab-12">
-                <img class="s-about__pic" src="images/avatars/user-06.jpg" alt="">
-            </div>
-            <div class="column large-9 tab-12 s-about__content">
-                <h3>About Me</h3>
-                <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa 
-                quae ab illo inventore veritatis et quasi architecto beatae vitae 
-                dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit 
-                aspernatur aut odit aut fugit, sed quia consequuntur magni dolores 
-                eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, 
-                qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, 
-                sed quia non numquam eius modi tempora incidunt ut labore et dolore 
-                magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis 
-                nostrum exercitationem ullam corporis suscipit laboriosam.
-                </p>
-
-                <hr>
-
-                <div class="row s-about__content-bottom">
-                    <div class="column w-1000-stack">
-                        <h3>Contact Details</h3>
-    
-                        <p>
-                        Jonathan Doe <br>
-                        1600 Amphitheatre Parkway <br>
-                        Mountain View, CA 94043 US <br>
-                        <a href="tel:+1975432345">+197 543 2345</a> <br>
-                        <a href="mailto:#0">sayhello@ceevee.com</a>
-                        </p>
-                        
-                    </div>
-                    <div class="column w-1000-stack">
-                        <a href="#0" class="btn btn--download">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(0, 0, 0, 1);transform:;-ms-filter:"><path d="M12 16L16 11 13 11 13 4 11 4 11 11 8 11z"></path><path d="M20,18H4v-7H2v7c0,1.103,0.897,2,2,2h16c1.103,0,2-0.897,2-2v-7h-2V18z"></path></svg>
-                            Download CV
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div> <!-- end row -->
-
-    </section> <!-- end s-about -->
-
-
-    <!-- resume
-    ================================================== -->
-    <section id="resume" class="s-resume target-section">
         
-        <div class="row s-resume__section">
-            <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Career</h3>
-            </div>
-            <div class="column large-9 tab-12">
-                <div class="resume-block">
-
-                    <div class="resume-block__header">
-                        <h4 class="h3">Dropbox</h4>
-                        <p class="resume-block__header-meta">
-                            <span>Product Designer</span> 
-                            <span class="resume-block__header-date">
-                                August 2019 - Present
-                            </span>
-                        </p>
-                    </div>
-
-                    <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
-                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
-                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
-                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
-                    </p>
-
-                </div> <!-- end resume-block -->
-
-                <div class="resume-block">
-
-                    <div class="resume-block__header">
-                        <h4 class="h3">Facebook</h4>
-                        <p class="resume-block__header-meta">
-                            <span>UI/UX Designer</span> 
-                            <span class="resume-block__header-date">
-                                August 2016 - July 2019
-                            </span>
-                        </p>
-                    </div>
-
-                    <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
-                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
-                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
-                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
-                    </p>
-
-                </div> <!-- end resume-block -->
-            </div>
-        </div> <!-- s-resume__section -->
-
-
-        <div class="row s-resume__section">
-            <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Education</h3>
-            </div>
-            <div class="column large-9 tab-12">
-                <div class="resume-block">
-
-                    <div class="resume-block__header">
-                        <h4 class="h3">University of Life</h4>
-                        <p class="resume-block__header-meta">
-                            <span>Master in Graphic Design</span> 
-                            <span class="resume-block__header-date">
-                                April 2015
-                            </span>
-                        </p>
-                    </div>
-
-                    <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
-                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
-                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
-                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
-                    </p>
-
-                </div> <!-- end resume-block -->
-
-                <div class="resume-block">
-
-                    <div class="resume-block__header">
-                        <h4 class="h3">School of Cool Designers</h4>
-                        <p class="resume-block__header-meta">
-                            <span>B.A. Degree in Graphic Design</span> 
-                            <span class="resume-block__header-date">
-                                August 2012
-                            </span>
-                        </p>
-                    </div>
-
-                    <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
-                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
-                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
-                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
-                    </p>
-
-                </div> <!-- end resume-block -->
-            </div>
-        </div> <!-- s-resume__section -->
-
-
-        <div class="row s-resume__section">
-            <div class="column large-3 tab-12">
-                <h3 class="section-header-allcaps">Skills</h3>
-            </div>
-            <div class="column large-9 tab-12">
-                <div class="resume-block">
-
-                    <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Inventore 
-                    vero quidem nobis maxime dolorem aliquam quisquam eum ipsum amet. Vitae 
-                    aut atque fuga dolorem. Vel voluptatibus fugiat nam. Impedit aperiam 
-                    nesciunt facilis! Porro architecto dicta inventore tempora ratione quia odio.
-                    </p>
-
-                    <ul class="skill-bars-fat">
-                        <li>
-                        <div class="progress percent85"></div>
-                        <strong>HTML</strong>
-                        </li>
-                        <li>
-                        <div class="progress percent85"></div>
-                        <strong>CSS</strong>
-                        </li>
-                        <li>
-                        <div class="progress percent65"></div>
-                        <strong>Javascript</strong>
-                        </li>
-                        <li>
-                        <div class="progress percent90"></div>
-                        <strong>Figma</strong>
-                        </li>
-                        <li>
-                        <div class="progress percent75"></div>
-                        <strong>Illustrator</strong>
-                        </li>
-                        <li>
-                        <div class="progress percent60"></div>
-                        <strong>Photoshop</strong>
-                        </li>
-                    </ul>
-
-                </div> <!-- end resume-block -->
-
-            </div>
-        </div> <!-- s-resume__section -->
-
-    </section> <!-- end s-resume -->
-
-
-    <!-- portfolio
-    ================================================== -->
-    <section id="portfolio" class="s-portfolio target-section">
-
-        <div class="row s-portfolio__header">
-            <div class="column large-12">
-                <h3>A Few Of My Latest Creations</h3>
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full text-center">
+                <h3>About</h3>
+                <h1>More About Me</h1>
+                <p class="lead">Hi, my name's Rudraksh and I'm a drone enthusiast and a Avionics Software and Systems testing engineer. I also have experience making really cool UAVs specially quadcopters. I have worked at a number of companies gaining teamwork and leadership skills and most importantly, AGENCY!</p>
             </div>
         </div>
 
-        <div class="row collapse block-large-1-4 block-medium-1-3 block-tab-1-2 block-500-stack folio-list">
+        <div class="row about-content">
 
-            <div class="column folio-item">
-                <a href="#modal-01" class="folio-item__thumb">
-                    <img src="images/portfolio/droplet.jpg" 
-                         srcset="images/portfolio/droplet.jpg 1x, 
-                                 images/portfolio/droplet@2x.jpg 2x" alt="">
-                </a>
-            </div> <!-- end folio-item -->
+            <div class="col-six tab-full left">
+                <h3>Howdy!</h3>
 
-            <div class="column folio-item">
-                <a href="#modal-02" class="folio-item__thumb">
-                    <img src="images/portfolio/lamp.jpg" 
-                         srcset="images/portfolio/lamp.jpg 1x, 
-                                 images/portfolio/lamp@2x.jpg 2x" alt="">
-                </a>
-            </div> <!-- end folio-item -->
+                <p>Lorem ipsum Ut eiusmod ex magna sit dolor esse adipisicing minim ad cupidatat eu veniam nostrud mollit laboris sunt magna velit culpa consectetur nostrud consectetur labore sed do.</p>
 
-            <div class="column folio-item">
-                <a href="#modal-03" class="folio-item__thumb">
-                    <img src="images/portfolio/minimalismo.jpg" 
-                         srcset="images/portfolio/minimalismo.jpg 1x, 
-                                 images/portfolio/minimalismo@2x.jpg 2x" alt="">
-                </a>
-            </div> <!-- end folio-item -->
-
-            <div class="column folio-item">
-                <a href="#modal-04" class="folio-item__thumb">
-                    <img src="images/portfolio/shutterbug.jpg" 
-                         srcset="images/portfolio/shutterbug.jpg 1x, 
-                                 images/portfolio/shutterbug@2x.jpg 2x" alt="">
-                </a>
-            </div> <!-- end folio-item -->
-
-            <div class="column folio-item">
-                <a href="#modal-05" class="folio-item__thumb">
-                    <img src="images/portfolio/fuji.jpg" 
-                         srcset="images/portfolio/fuji.jpg 1x, 
-                                 images/portfolio/fuji@2x.jpg 2x" alt="">
-                </a>
-            </div> <!-- end folio-item -->
-
-            <div class="column folio-item">
-                <a href="#modal-06" class="folio-item__thumb">
-                    <img src="images/portfolio/skaterboy.jpg" 
-                         srcset="images/portfolio/skaterboy.jpg 1x, 
-                                 images/portfolio/skaterboy@2x.jpg 2x" alt="">
-                </a>
-            </div> <!-- end folio-item -->
-
-            <div class="column folio-item">
-                <a href="#modal-07" class="folio-item__thumb">
-                    <img src="images/portfolio/rucksack.jpg" 
-                         srcset="images/portfolio/rucksack.jpg 1x, 
-                                 images/portfolio/rucksack@2x.jpg 2x" alt="">
-                </a>
-            </div> <!-- end folio-item -->
-
-            <div class="column folio-item">
-                <a href="#modal-08" class="folio-item__thumb">
-                    <img src="images/portfolio/sanddunes.jpg" 
-                         srcset="images/portfolio/sanddunes.jpg 1x, 
-                                 images/portfolio/sanddunes@2x.jpg 2x" alt="">
-                </a>
-            </div> <!-- end folio-item -->
-
-        </div> <!-- end folio-list -->
-
-
-        <!-- Modal Templates Popup
-        =========================================================== -->
-        <div id="modal-01" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-droplet.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Droplet</h5>
-                    <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Branding</li>
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-02" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-lamp.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>The Lamp</h5>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Branding</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-03" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-minimalismo.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Minimalismo</h5>
-                    <p>Exercitationem reprehenderit quod explicabo consequatur aliquid ut magni ut. Deleniti quo corrupti illum velit eveniet ratione necessitatibus ipsam mollitia.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-04" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-shutterbug.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Shutterbug</h5>
-                    <p>Dolores velit qui quos nobis. Aliquam delectus voluptas quos possimus non voluptatem voluptas voluptas. Est doloribus eligendi porro doloribus voluptatum.</p>
-                    <ul class="modal-popup__cat">
-                        <li>E-Commerce</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-05" hidden>
-            <div class="modal-popup">
-
-                <img src="images/portfolio/gallery/g-fuji.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Fuji</h5>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-06" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-skaterboy.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Skaterboy</h5>
-                    <p>Quisquam vel libero consequuntur autem voluptas. Qui aut vero. Omnis fugit mollitia cupiditate voluptas. Aenean sollicitudin, lorem quis bibendum auctor.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Branding</li>
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-07" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-rucksack.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Rucksack</h5>
-                    <p>Odio soluta enim quos sit asperiores rerum rerum repudiandae cum. Vel voluptatem alias qui assumenda iure et expedita voluptatem. Ratione officiis quae.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Branding</li>
-                        <li>Product Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-        <div id="modal-08" hidden>
-            <div class="modal-popup">
-                <img src="images/portfolio/gallery/g-sanddunes.jpg" alt="" />
-    
-                <div class="modal-popup__desc">
-                    <h5>Sand Dunes</h5>
-                    <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
-                    <ul class="modal-popup__cat">
-                        <li>Web Design</li>
-                    </ul>
-                </div>
-    
-                <a href="https://www.behance.net/" class="modal-popup__details">Project link</a>
-            </div>
-        </div> <!-- end modal -->
-
-
-    </section> <!-- end s-portfolio -->
-
-
-    <!-- CTA
-    ================================================== -->
-    <section class="s-cta">
-
-        <div class="row">
-            <div class="column">
-                <h3 class="h2 section-desc">
-                    Need a great reliable web hosting?
-                </h3>
-            </div>
-        </div> <!-- end heading-block -->
-
-        <div class="row cta-content">
-            <div class="column">
                 <p>
-                We highly recommend <a href="https://www.dreamhost.com/r.cgi?287326">DreamHost</a>.
-                Powerful web and Wordpress hosting. Guaranteed.
-                Starting at $2.95 per month.
+                Lorem ipsum Nisi officia Duis irure voluptate dolor commodo pariatur occaecat aliquip adipisicing voluptate Ut in qui ea sint occaecat in commodo in in in incididunt ut sunt in Ut Duis in ut ex qui anim cupidatat cupidatat ex in non dolore labore ea amet cillum ea qui dolor nisi sed velit mollit exercitation ex fugiat labore in deserunt culpa laborum culpa anim dolore laboris amet irure mollit proident velit fugiat aute ea elit magna consequat qui officia quis elit Duis dolor esse cupidatat tempor proident voluptate aliqua ex cupidatat do eiusmod veniam irure laborum ut magna nostrud dolore ullamco commodo elit sit magna aliqua laborum veniam officia dolor.	
                 </p>
-
-                <a href="https://www.dreamhost.com/r.cgi?287326" class="btn btn--primary h-full-width">Get Started</a>
             </div>
-        </div> <!-- end cta-content -->
 
-    </section> <!-- end s-cta -->
+            <div class="col-six tab-full right">
+                <h3>I've Got Some skills.</h3>
+
+                <ul class="skill-bars">
+                    <li>
+                    <div class="progress percent90"><span>90%</span></div>
+                    <strong>Mechatronics</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent85"><span>85%</span></div>
+                    <strong>Controls Engineering</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent70"><span>70%</span></div>
+                    <strong>Motion Planning</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent85"><span>85%</span></div>
+                    <strong>SLAM</strong>
+                    </li>
+                    <li>
+                    <div class="progress percent75"><span>75%</span></div>
+                    <strong>CAD</strong>
+                    </li>   
+                    <li>
+                    <div class="progress percent70"><span>70%</span></div>
+                    <strong>Multi Agent Systems</strong>
+                    </li>   
+                </ul>
+            </div>
+
+        </div> <!-- end about-content -->
+
+        <div class="row about-content about-content--buttons">
+
+            <div class="col-six tab-full left">
+                <a href=https://drive.google.com/uc?id=1jdUsv0XsA0-UCzCnWMFKo1SQdbgZc4w9&export=download  class="btn btn--primary full-width">Download My CV</a>
+            </div>
+            <div class="col-six tab-full right">
+                <a href="mailto:rudrakshkuchiya@gmail.com" class="btn full-width">Hire Me Now</a>
+            </div>
+
+        </div> <!-- end about-content buttons -->
+        
+        
+        <div class="row about-content about-content--timeline">
+
+            <div class="col-full text-center">
+                <h3>My Education.</h3>
+            </div>
+
+            <div class="col-six tab-full left">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">2020 - 2025</p>
+                            <h3>Masters of Tehnology</h3>
+                            <h5>Indian Institute of Technology Bombay</h5>
+                            <div class="timeline__desc">	
+                                <p>I am pursuing my Master's in Computer-Aided Design and Automation at IIT Bombay, gaining expertise in CAD software, automation, interdisciplinary knowledge, and practical projects. Prepared for a career in manufacturing, robotics, and aerospace, leveraging IIT Bombay's reputation and alumni network.</p>
+                            </div>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
+
+            <div class="col-six tab-full right">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">2020 - 2025
+                            <h3>Bachelors of Technology</h3>
+                            <h5>Indian Institute of Technology Bombayr</h5>
+                            <div class="timeline__desc">	
+                                <p>I am pursuing my Mechanical Engineering Bachelor's at IIT Bombay, mastering mechanics, thermodynamics, and materials science. Practical projects and research honed my design and analysis skills. The program's rigor and reputation prepared me for a successful mechanical engineering career.</p>
+                            </div>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end right -->
+
+        </div> <!-- end about-content timeline -->
+
+    </section> <!-- end about -->
+
+    <!-- works
+    ================================================== -->
+    <section id="works" class="s-works target-section">
+        <div class="row about-content about-content--timeline">
+
+            <div class="col-full text-center">
+                <h3>My Work Experience.</h3>
+            </div>
+
+            <div class="col-six tab-full left">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2015 - Present</p>
+                            <h3>Awesome Studio</h3>
+                            <h5>Lead Designer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2014 - June 2015</p>
+                            <h3>Super Cool Agency</h3>
+                            <h5>Front-end Developer</h5>
+                        </div>
+                        <div class="timeline__desc">	
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
+
+            <div class="col-six tab-full right">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2012 - June 2014</p>
+                            <h3>Great Design Studio</h3>
+                            <h5>Web Designer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">July 2011 - June 2012</p>
+                            <h3>Epic Design Agency</h3>
+                            <h5>Web Designer</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>Lorem ipsum Occaecat do esse ex et dolor culpa nisi ex in magna consectetur nisi cupidatat laboris esse eiusmod deserunt aute do quis velit esse sed Ut proident cupidatat nulla esse cillum laborum occaecat nostrud sit dolor incididunt amet est occaecat nisi incididunt.</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                </div> <!-- end timeline -->
+            </div> <!-- end right -->
+
+        </div> <!-- end about-content timeline -->
+
+    </section> <!-- end works -->
+
 
 
     <!-- testimonials
     ================================================== -->
-    <section id="testimonials" class="s-testimonials target-section">
+    <div class="s-testimonials">
 
-        <div class="s-testimonials__bg"></div>
-
-        <div class="row s-testimonials__header">
-            <div class="column large-12">
-                <h3>Hear What My Clients Says</h3>
+        <div class="overlay"></div>
+        <div class="shadow-overlay"></div>
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h3 style="color:#ffffff;">Journal</h3>
+                <h1 style="color:#ffffff;">Latest From The Blog.</h1>
+                <p class="lead" style="color:#ffffff;">Lorem ipsum Dolor adipisicing nostrud et aute. 
+                Excepteur amet commodo ea dolore irure esse Duis nulla sint fugiat cillum 
+                ullamco proident aliquip quis qui voluptate dolore veniam Ut laborum non est in officia.</p>
             </div>
         </div>
 
-        <div class="row s-testimonials__content">
+    </div> <!-- end s-testimonials -->
 
-            <div class="column">
 
-                <div class="swiper-container testimonial-slider">
+    <!-- blog
+    ================================================== -->
+    <section id="blog" class="s-blog target-section">
 
-                    <div class="swiper-wrapper">
+        <div class="row blog-content">
+            <div class="col-full">
 
-                        <div class="testimonial-slider__slide swiper-slide">
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/user-02.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong>Tim Cook</strong>
-                                    <span>CEO, Apple</span>
-                                </cite>
-                            </div>
-                            <p>
-                            Molestiae incidunt consequatur quis ipsa autem nam sit enim magni. Voluptas tempore rem. 
-                            Explicabo a quaerat sint autem dolore ducimus ut consequatur neque.  Nisi dolores quaerat fuga rem nihil nostrum.
-                            Laudantium quia consequatur molestias delectus culpa.
-                            </p>
-                        </div> <!-- end testimonial-slider__slide -->
+                <div class="blog-list block-1-2 block-tab-full">
+                    <article class="col-block">
+                                
+                        <div class="blog-date">
+                            <a href="blog-single.html">Aug 15, 2023</a>
+                        </div>  
+                        
+                        <h2 class="h01"><a href="blog-single.html">An Comprehensive Guide to Navigating Internship Applications with Confidence! 🚀.</a></h2>
+                        <p>
+                            Forget the glitz and glamour of non-core corporate charm and appeal; I had my sights set on the core, the industrial marvels that would keep my inner geek engaged for the next decade.....Imagine you're stuck in an elevator with Elon Musk; what would you say? That's my LinkedIn approach. Trust me, it worked like a charm.
+                        </p>
+
+                        <!-- <div class="blog-cat">
+                                <a href="blog.html">Apping</a><a href="blog.html">Guide</a>
+                        </div> -->
+
+                        
+                    </article>
+                    
+                </div> <!-- end blog-list -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end blog-content -->
+
+    </section> <!-- end s-blog -->
+
+
+    <!-- s-cta
+    ================================================== -->
+    <!-- <section class="s-cta">
         
-                        <div class="testimonial-slider__slide swiper-slide">
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/user-03.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong>Sundar Pichai</strong>
-                                    <span>CEO, Google</span>
-                                </cite>
-                            </div>
-                            <p>
-                            Excepturi nam cupiditate culpa doloremque deleniti repellat. Veniam quos repellat voluptas animi adipisci.
-                            Nisi eaque consequatur. Voluptatem dignissimos ut ducimus accusantium perspiciatis.
-                            Quasi voluptas eius distinctio. Atque eos maxime.
-                            </p>
-                        </div> <!-- end testimonial-slider__slide -->
+        <div class="row narrow cta">
+
+            <div class="col-full cta__content">
+
+                <h2 class="h01"><a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Styleshout Recommends Dreamhost.</a></h2>
+
+                <p class="lead">
+                Looking for an awesome and reliable webhosting? Try <a href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">DreamHost</a>.
+                Get <span>$50 off</span> when you sign up with the promocode <span>styleshout</span>.
+                </p>
+
+                <div class="cta__action">
+                    <a class="btn btn--primary btn--large" href="http://www.dreamhost.com/r.cgi?287326|STYLESHOUT">Sign Up Now</a>
+                </div>	
+
+            </div>
+
+        </div> <!-- end cta -->
         
-                        <div class="testimonial-slider__slide swiper-slide">
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/user-04.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong>Satya Nadella</strong>
-                                    <span>CEO, Microsoft</span>
-                                </cite>
-                            </div>
-                            <p>
-                            Repellat dignissimos libero. Qui sed at corrupti expedita voluptas odit. Nihil ea quia nesciunt. Ducimus aut sed ipsam.  
-                            Autem eaque officia cum exercitationem sunt voluptatum accusamus. Quasi voluptas eius distinctio.
-                            Voluptatem dignissimos ut.
-                            </p>
-                        </div> <!-- end testimonial-slider__slide -->
-
-                        <div class="testimonial-slider__slide swiper-slide">
-                            <div class="testimonial-slider__author">
-                                <img src="images/avatars/user-05.jpg" alt="Author image" class="testimonial-slider__avatar">
-                                <cite class="testimonial-slider__cite">
-                                    <strong>Jeff Bezos</strong>
-                                    <span>CEO, Amazon</span>
-                                </cite>
-                            </div>
-                            <p>
-                            Nunc interdum lacus sit amet orci. Vestibulum dapibus nunc ac augue. Fusce vel dui. In ac felis 
-                            quis tortor malesuada pretium. Curabitur vestibulum aliquam leo. Qui sed at corrupti expedita voluptas odit. 
-                            Nihil ea quia nesciunt. Ducimus aut sed ipsam.
-                            </p>
-                        </div> <!-- end testimonial-slider__slide -->
-    
-                    </div> <!-- end testimonial slider swiper-wrapper -->
-
-                    <div class="swiper-pagination"></div>
-
-                </div> <!-- end swiper-container -->
-
-            </div> <!-- end column -->
-
-        </div> <!-- end row -->
-
-    </section> <!-- end s-testimonials -->
+    </section> -->
 
 
-    <!-- contact
+    <!-- s-stats
+    ================================================== -->
+    <!-- <section id="stats" class="s-stats">
+        <div class="row block-1-4 block-tab-1-2 block-mob-full stats">
+
+            <div class="col-block stats__col ">
+                <div class="stats__count">
+                    128
+                </div>
+                <h4>Awards Received</h4>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">
+                    1500
+                </div>
+                <h4>Cups of Coffee</h4>
+            </div>
+            <div class="col-block stats__col stats__col--highlight">
+                <div class="stats__upsign">
+                    <a href="#"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+                <div class="stats__count">
+                    110
+                </div>
+                <h4>Projects Completed</h4>
+            </div>
+            <div class="col-block stats__col">
+                <div class="stats__count">
+                    101
+                </div>
+                <h4>Happy Clients</h4> 
+            </div>
+
+        </div>
+    </section> <!-- end s-stats -->
+
+
+    <!-- s-stats -->
     ================================================== -->
     <section id="contact" class="s-contact target-section">
 
-        <div class="row s-contact__header">
-            <div class="column large-12">
-                <h3 class="section-header-allcaps">Say Hello</h3>
+        <div class="overlay"></div>
+
+        <div class="row narrow section-intro">
+            <div class="col-full">
+                <h3>Contact</h3>
+                <h1>Say Hello.</h1>
             </div>
         </div>
 
-        <div class="row s-contact__content">
+        <div class="row contact__main">
+            <div class="col-eight tab-full contact__form">
+                <form name="contactForm" id="contactForm" method="post" action="">
+                    <fieldset>
+    
+                    <div class="form-field">
+                        <input name="contactName" type="text" id="contactName" placeholder="Name" value="" minlength="2" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactEmail" type="email" id="contactEmail" placeholder="Email" value="" required="" aria-required="true" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <input name="contactSubject" type="text" id="contactSubject" placeholder="Subject" value="" class="full-width">
+                    </div>
+                    <div class="form-field">
+                        <textarea name="contactMessage" id="contactMessage" placeholder="message" rows="10" cols="50" required="" aria-required="true" class="full-width"></textarea>
+                    </div>
+                    <div class="form-field">
+                        <button class="full-width btn--primary">Submit</button>
+                        <div class="submit-loader">
+                            <div class="text-loader">Sending...</div>
+                            <div class="s-loader">
+                                <div class="bounce1"></div>
+                                <div class="bounce2"></div>
+                                <div class="bounce3"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    </fieldset>
+                </form>
 
-            <div class="column large-7 medium-12">
+                <!-- contact-warning -->
+                <div class="message-warning">
+                    Something went wrong. Please try again.
+                </div> 
+            
+                <!-- contact-success -->
+                <div class="message-success">
+                    Your message was sent, thank you!<br>
+                </div>
+                        
+            </div>
+            <div class="col-four tab-full contact__infos">
+                <h4 class="h06">Phone</h4>
+                <p>Phone: (+91) 9826951787
+                </p>
 
-                <h4 class="huge-text">
-                Have a new project in mind? Let's collaborate and build something awesome. 
-                Let's turn that idea to an even greater product :)
-                </h4>
+                <h4 class="h06">Email</h4>
+                <a href="mailto:rudrakshkuchiya@gmail.com" style="color:#ffffff">rudrakshkuchiya@gmail.com</a>
 
             </div>
 
-            <div class="column large-4 medium-12">
-
-                <div class="row contact-infos">
-                    <div class="column large-12 medium-6 tab-12">
-                        <div class="contact-block">
-                            <h5 class="contact-block__header">
-                                Email
-                            </h5>
-                            <p class="contact-block__content">
-                                <a class="mailtoui" href="mailto:sayhello@ceevee.com">sayhello@ceevee.com</a>
-                            </p>
-                        </div> <!-- end contact-block -->
-                    </div>
-                    <div class="column large-12 medium-6 tab-12">
-                        <div class="contact-block">
-                            <h5 class="contact-block__header">
-                                Phone
-                            </h5>
-                            <p class="contact-block__content">
-                                <a href="tel:+1975432345">+197 543 2345</a>
-                            </p>
-                        </div> <!-- end contact-block -->
-                    </div>
-
-                    <div class="column large-12">
-                        <a href="mailto:sayhello@ceevee.com" class="mailtoui btn btn--primary h-full-width">Let's Talk</a>
-                    </div>
-                </div> <!-- end contact-infos -->
-
-            </div>
-        </div> <!-- s-contact__content -->
+        </div>
 
     </section> <!-- end s-contact -->
-    
+
 
     <!-- footer
     ================================================== -->
-    <footer class="s-footer">
+    <footer>
         <div class="row">
-            <div class="column large-4 medium-6 w-1000-stack s-footer__social-block">
-                <ul class="s-footer__social">
-                    <li><a href="#0"><i class="fab fa-facebook-f" aria-hidden="true"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-dribbble" aria-hidden="true"></i></a></li>
-                    <li><a href="#0"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a></li>
-                </ul>
-            </div>
+            <div class="col-full">
 
-            <div class="column large-7 medium-6 w-1000-stack ss-copyright">
-                <span>© Copyright Ceevee 2021</span> 
-                <span>Design by <a href="https://www.styleshout.com/">StyleShout</a></span>
+                <div class="footer-logo">
+                    <a class="footer-site-logo" href="#0" style="color:#ffffff">Rudraksh Kuchiya/a>
+                </div>
+
+                <ul class="footer-social">
+                    <li><a href=https://github.com/KRudraksh>
+                        <i class="im im-github" aria-hidden="true"></i>
+                        <span>Github</span>
+                    </a></li>
+                    <li><a href=https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09>
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href=https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D>
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                </ul>
+                    
             </div>
         </div>
 
-        <div class="ss-go-top">
-            <a class="smoothscroll" title="Back to Top" href="#top">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M6 4h12v2H6zm5 10v6h2v-6h5l-6-6-6 6z"/></svg>
-             </a>
-        </div> <!-- end ss-go-top -->
-    </footer>
+        <div class="row footer-bottom">
+
+            <div class="col-twelve">
+                <div class="copyright">
+                    <span>© Copyright Hola 2017</span> 
+                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a>, edited by Rudraksh Kuchiya</span>	
+                </div>
+
+                <div class="go-top">
+                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
+                </div>
+            </div>
+
+        </div> <!-- end footer-bottom -->
+
+    </footer> <!-- end footer -->
+
+
+    <!-- photoswipe background
+    ================================================== -->
+    <div aria-hidden="true" class="pswp" role="dialog" tabindex="-1">
+
+        <div class="pswp__bg"></div>
+        <div class="pswp__scroll-wrap">
+
+            <div class="pswp__container">
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+                <div class="pswp__item"></div>
+            </div>
+
+            <div class="pswp__ui pswp__ui--hidden">
+                <div class="pswp__top-bar">
+                    <div class="pswp__counter"></div><button class="pswp__button pswp__button--close" title="Close (Esc)"></button> <button class="pswp__button pswp__button--share" title=
+                    "Share"></button> <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button> <button class="pswp__button pswp__button--zoom" title=
+                    "Zoom in/out"></button>
+                    <div class="pswp__preloader">
+                        <div class="pswp__preloader__icn">
+                            <div class="pswp__preloader__cut">
+                                <div class="pswp__preloader__donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                    <div class="pswp__share-tooltip"></div>
+                </div><button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)"></button> <button class="pswp__button pswp__button--arrow--right" title=
+                "Next (arrow right)"></button>
+                <div class="pswp__caption">
+                    <div class="pswp__caption__center"></div>
+                </div>
+            </div>
+
+        </div>
+
+    </div><!-- end photoSwipe background -->
+
+    <div id="preloader">
+        <div id="loader"></div>
+    </div>
 
 
     <!-- Java Script
     ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
 

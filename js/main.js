@@ -1,317 +1,434 @@
 /* ===================================================================
- * Ceevee 2.0.0 - Main JS
+ * Hola - Main JS
  *
  * ------------------------------------------------------------------- */
 
-(function(html) {
+(function($) {
 
     "use strict";
-    
-    html.className = html.className.replace(/\bno-js\b/g, '') + ' js ';
+
+    var cfg = {
+        scrollDuration : 800, // smoothscroll duration
+        mailChimpURL   : ''   // mailchimp url
+    },
+
+    $WIN = $(window);
+
+    // Add the User Agent to the <html>
+    // will be used for IE10 detection (Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.2; Trident/6.0))
+    var doc = document.documentElement;
+    doc.setAttribute('data-useragent', navigator.userAgent);
 
 
-   /* Preloader
-    * -------------------------------------------------- */
-    const ssPreloader = function() {
+    /* Preloader
+     * -------------------------------------------------- */
+    var ssPreloader = function() {
 
-        const preloader = document.querySelector('#preloader');
-        if (!preloader) return;
+        $("html").addClass('ss-preload');
 
-        window.addEventListener('load', function() {
+        $WIN.on('load', function() {
+
+            // force page scroll position to top at page refresh
+            // $('html, body').animate({ scrollTop: 0 }, 'normal');
+
+            // will first fade out the loading animation 
+            $("#loader").fadeOut("slow", function() {
+                // will fade out the whole DIV that covers the website.
+                $("#preloader").delay(300).fadeOut("slow");
+            }); 
             
-            document.querySelector('body').classList.remove('ss-preload');
-            document.querySelector('body').classList.add('ss-loaded');
-
-            preloader.addEventListener('transitionend', function(e) {
-                if (e.target.matches("#preloader")) {
-                    this.style.display = 'none';
-                }
-            });
-
+            // for hero content animations 
+            $("html").removeClass('ss-preload');
+            $("html").addClass('ss-loaded');
+        
         });
-
-        // force page scroll position to top at page refresh
-        // window.addEventListener('beforeunload' , function () {
-        //     window.scrollTo(0, 0);
-        // });
-
-    }; // end ssPreloader
+    };
 
 
-   /* Parallax
-    * -------------------------------------------------- */
-    const ssParallax = function() { 
+    /* pretty print
+     * -------------------------------------------------- */
+    var ssPrettyPrint = function() {
+        $('pre').addClass('prettyprint');
+        $( document ).ready(function() {
+            prettyPrint();
+        });
+    };
 
-        const rellax = new Rellax('.rellax');
 
-    }; // end ssParallax
+    /* Move header
+     * -------------------------------------------------- */
+    var ssMoveHeader = function () {
+
+        var hero = $('.page-hero'),
+            hdr = $('header'),
+            triggerHeight = hero.outerHeight() - 170;
 
 
-   /* Move header menu
-    * -------------------------------------------------- */
-    const ssMoveHeader = function () {
+        $WIN.on('scroll', function () {
 
-        const hdr = document.querySelector('.s-header');
-        const hero = document.querySelector('#hero');
-        let triggerHeight;
-
-        if (!(hdr && hero)) return;
-
-        setTimeout(function(){
-            triggerHeight = hero.offsetHeight - 170;
-        }, 300);
-
-        window.addEventListener('scroll', function () {
-
-            let loc = window.scrollY;
-           
+            var loc = $WIN.scrollTop();
 
             if (loc > triggerHeight) {
-                hdr.classList.add('sticky');
+                hdr.addClass('sticky');
             } else {
-                hdr.classList.remove('sticky');
+                hdr.removeClass('sticky');
             }
 
             if (loc > triggerHeight + 20) {
-                hdr.classList.add('offset');
+                hdr.addClass('offset');
             } else {
-                hdr.classList.remove('offset');
+                hdr.removeClass('offset');
             }
 
             if (loc > triggerHeight + 150) {
-                hdr.classList.add('scrolling');
+                hdr.addClass('scrolling');
             } else {
-                hdr.classList.remove('scrolling');
+                hdr.removeClass('scrolling');
             }
 
         });
 
-    }; // end ssMoveHeader
+        // $WIN.on('resize', function() {
+        //     if ($WIN.width() <= 768) {
+        //             hdr.removeClass('sticky offset scrolling');
+        //     }
+        // });
+
+    };
 
 
-   /* Mobile Menu
-    * ---------------------------------------------------- */ 
-    const ssMobileMenu = function() {
+    /* Mobile Menu
+     * ---------------------------------------------------- */ 
+    var ssMobileMenu = function() {
 
-        const toggleButton = document.querySelector('.s-header__menu-toggle');
-        const headerNavWrap = document.querySelector('.s-header__nav-wrap');
-        const siteBody = document.querySelector("body");
+        var toggleButton = $('.header-menu-toggle'),
+            nav = $('.header-nav-wrap');
 
-        if (!(toggleButton && headerNavWrap)) return;
-
-        toggleButton.addEventListener('click', function(event){
+        toggleButton.on('click', function(event){
             event.preventDefault();
-            toggleButton.classList.toggle('is-clicked');
-            siteBody.classList.toggle('menu-is-open');
+
+            toggleButton.toggleClass('is-clicked');
+            nav.slideToggle();
         });
 
-        headerNavWrap.querySelectorAll('.s-header__nav a').forEach(function(link) {
-            link.addEventListener("click", function(evt) {
+        if (toggleButton.is(':visible')) nav.addClass('mobile');
 
-                // at 800px and below
-                if (window.matchMedia('(max-width: 800px)').matches) {
-                    toggleButton.classList.toggle('is-clicked');
-                    siteBody.classList.toggle('menu-is-open');
-                }
-            });
+        $WIN.on('resize', function() {
+            if (toggleButton.is(':visible')) nav.addClass('mobile');
+            else nav.removeClass('mobile');
         });
 
-        window.addEventListener('resize', function() {
+        nav.find('a').on("click", function() {
 
-            // above 800px
-            if (window.matchMedia('(min-width: 801px)').matches) {
-                if (siteBody.classList.contains('menu-is-open')) siteBody.classList.remove('menu-is-open');
-                if (toggleButton.classList.contains("is-clicked")) toggleButton.classList.remove("is-clicked");
+            if (nav.hasClass('mobile')) {
+                toggleButton.toggleClass('is-clicked');
+                nav.slideToggle(); 
             }
         });
 
-    }; // end ssMobileMenu
+    };
 
 
-   /* Highlight active menu link on pagescroll
-    * ------------------------------------------------------ */
-    const ssScrollSpy = function() {
+    /* Masonry
+     * ---------------------------------------------------- */ 
+    var ssMasonryFolio = function () {
 
-        const sections = document.querySelectorAll(".target-section");
+        var containerBricks = $('.masonry');
 
-        // Add an event listener listening for scroll
-        window.addEventListener("scroll", navHighlight);
-
-        function navHighlight() {
-        
-            // Get current scroll position
-            let scrollY = window.pageYOffset;
-        
-            // Loop through sections to get height(including padding and border), 
-            // top and ID values for each
-            sections.forEach(function(current) {
-                const sectionHeight = current.offsetHeight;
-                const sectionTop = current.offsetTop - 50;
-                const sectionId = current.getAttribute("id");
-            
-               /* If our current scroll position enters the space where current section 
-                * on screen is, add .current class to parent element(li) of the thecorresponding 
-                * navigation link, else remove it. To know which link is active, we use 
-                * sectionId variable we are getting while looping through sections as 
-                * an selector
-                */
-                if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-                    document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.add("current");
-                } else {
-                    document.querySelector(".s-header__nav a[href*=" + sectionId + "]").parentNode.classList.remove("current");
-                }
+        containerBricks.imagesLoaded(function () {
+            containerBricks.masonry({
+                itemSelector: '.masonry__brick',
+                resize: true
             });
-        }
+        });
+    };
 
-    }; // end ssScrollSpy
 
+    /* photoswipe
+     * ----------------------------------------------------- */
+    var ssPhotoswipe = function() {
+        var items = [],
+            $pswp = $('.pswp')[0],
+            $folioItems = $('.item-folio');
 
-   /* Swiper
-    * ------------------------------------------------------ */ 
-    const ssSwiper = function() {
+            // get items
+            $folioItems.each( function(i) {
 
-        const mySwiper = new Swiper('.swiper-container', {
-
-            slidesPerView: 1,
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },          
-            breakpoints: {
-                // when window width is >= 401px
-                401: {
-                    slidesPerView: 1,
-                    spaceBetween: 20
-                },
-                // when window width is >= 801px
-                801: {
-                    slidesPerView: 2,
-                    spaceBetween: 48
+                var $folio = $(this),
+                    $thumbLink =  $folio.find('.thumb-link'),
+                    $title = $folio.find('.item-folio__title'),
+                    $caption = $folio.find('.item-folio__caption'),
+                    $titleText = '<h4>' + $.trim($title.html()) + '</h4>',
+                    $captionText = $.trim($caption.html()),
+                    $href = $thumbLink.attr('href'),
+                    $size = $thumbLink.data('size').split('x'),
+                    $width  = $size[0],
+                    $height = $size[1];
+         
+                var item = {
+                    src  : $href,
+                    w    : $width,
+                    h    : $height
                 }
-            }
-         });
 
-    }; // end ssSwiper
+                if ($caption.length > 0) {
+                    item.title = $.trim($titleText + $captionText);
+                }
+
+                items.push(item);
+            });
+
+            // bind click event
+            $folioItems.each(function(i) {
+
+                $(this).on('click', function(e) {
+                    e.preventDefault();
+                    var options = {
+                        index: i,
+                        showHideOpacity: true
+                    }
+
+                    // initialize PhotoSwipe
+                    var lightBox = new PhotoSwipe($pswp, PhotoSwipeUI_Default, items, options);
+                    lightBox.init();
+                });
+
+            });
+
+    };
 
 
-   /* Lightbox
-    * ------------------------------------------------------ */
-    const ssLightbox = function() {
-
-        const folioLinks = document.querySelectorAll('.folio-item a');
-        const modals = [];
-
-        folioLinks.forEach(function(link) {
-            let modalbox = link.getAttribute('href');
-            let instance = basicLightbox.create(
-                document.querySelector(modalbox),
+    /* slick slider
+     * ------------------------------------------------------ */
+    var ssSlickSlider = function() {
+        
+        $('.testimonials__slider').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 1,
+            prevArrow: "<div class=\'slick-prev\'><i class=\'im im-arrow-left\' aria-hidden=\'true\'></i></div>",
+            nextArrow: "<div class=\'slick-next\'><i class=\'im im-arrow-right\' aria-hidden=\'true\'></i></div>",       
+            pauseOnFocus: false,
+            autoplaySpeed: 1500,
+            responsive: [
                 {
-                    onShow: function(instance) {
-                        //detect Escape key press
-                        document.addEventListener("keydown", function(evt) {
-                            evt = evt || window.event;
-                            if(evt.keyCode === 27){
-                            instance.close();
-                            }
-                        });
+                    breakpoint: 900,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
                     }
                 }
-            )
-            modals.push(instance);
+            ]
         });
 
-        folioLinks.forEach(function(link, index) {
-            link.addEventListener("click", function(e) {
-                e.preventDefault();
-                modals[index].show();
-            });
+    };
+
+
+    /* Highlight the current section in the navigation bar
+     * ------------------------------------------------------ */
+    var ssWaypoints = function() {
+
+        var sections = $(".target-section"),
+            navigation_links = $(".header-nav li a");
+
+        sections.waypoint( {
+
+            handler: function(direction) {
+
+                var active_section;
+
+                active_section = $('section#' + this.element.id);
+
+                if (direction === "up") active_section = active_section.prevAll(".target-section").first();
+
+                var active_link = $('.header-nav li a[href="#' + active_section.attr("id") + '"]');
+
+                navigation_links.parent().removeClass("current");
+                active_link.parent().addClass("current");
+
+            },
+
+            offset: '25%'
+
         });
-
-    };  // end ssLightbox
-
-
-   /* Alert boxes
-    * ------------------------------------------------------ */
-    const ssAlertBoxes = function() {
-
-        const boxes = document.querySelectorAll('.alert-box');
-  
-        boxes.forEach(function(box) {
-
-            box.addEventListener('click', function(e){
-                if (e.target.matches(".alert-box__close")) {
-                    e.stopPropagation();
-                    e.target.parentElement.classList.add("hideit");
-
-                    setTimeout(function() {
-                        box.style.display = "none";
-                    }, 500)
-                }    
-            });
-
-        })
-
-    }; // end ssAlertBoxes
-
-
-   /* Smoothscroll
-    * ------------------------------------------------------ */
-    const ssSmoothScroll = function () {
         
-        const triggers = document.querySelectorAll(".smoothscroll");
-
-        triggers.forEach(function(trigger) {
-            trigger.addEventListener("click", function() {
-                const target = trigger.getAttribute("href");
-
-                Jump(target, {
-                    duration: 1200,
-                });
-            });
-        });
-
-    }; // end ssSmoothScroll
+    };
 
 
-   /* back to top
+   /* Stat Counter
     * ------------------------------------------------------ */
-    const ssBackToTop = function() {
+    var ssStatCount = function() {
 
-        const pxShow = 900;
-        const goTopButton = document.querySelector(".ss-go-top");
+        var statSection = $(".s-stats"),
+        stats = $(".stats__count");
 
-        if (!goTopButton) return;
+        statSection.waypoint({
 
-        // Show or hide the button
-        if (window.scrollY >= pxShow) goTopButton.classList.add("link-is-visible");
+            handler: function(direction) {
 
-        window.addEventListener('scroll', function() {
-            if (window.scrollY >= pxShow) {
-                if(!goTopButton.classList.contains('link-is-visible')) goTopButton.classList.add("link-is-visible")
+                if (direction === "down") {
+
+                    stats.each(function () {
+                        var $this = $(this);
+
+                        $({ Counter: 0 }).animate({ Counter: $this.text() }, {
+                            duration: 4000,
+                            easing: 'swing',
+                            step: function (curValue) {
+                                $this.text(Math.ceil(curValue));
+                            }
+                        });
+                    });
+
+                } 
+
+                // trigger once only
+                this.destroy();
+
+            },
+
+            offset: "90%"
+
+        });
+    };
+
+
+   /* Smooth Scrolling
+    * ------------------------------------------------------ */
+    var ssSmoothScroll = function() {
+
+        $('.smoothscroll').on('click', function (e) {
+            var target = this.hash,
+            $target    = $(target);
+        
+            e.preventDefault();
+            e.stopPropagation();
+
+            $('html, body').stop().animate({
+                'scrollTop': $target.offset().top
+            }, cfg.scrollDuration, 'swing', function () {
+                window.location.hash = target;
+            });
+
+        });
+    };
+
+
+    /* Placeholder Plugin Settings
+     * ------------------------------------------------------ */
+    var ssPlaceholder = function() {
+        $('input, textarea, select').placeholder();  
+    };
+
+
+    /* Alert Boxes
+     * ------------------------------------------------------ */
+    var ssAlertBoxes = function() {
+
+        $('.alert-box').on('click', '.alert-box__close', function() {
+            $(this).parent().fadeOut(500);
+        }); 
+
+    };
+
+
+    /* Contact Form
+     * ------------------------------------------------------ */
+    var ssContactForm = function() {
+
+        /* local validation */
+	    $('#contactForm').validate({
+        
+            /* submit via ajax */
+            submitHandler: function(form) {
+    
+                var sLoader = $('.submit-loader');
+    
+                $.ajax({
+    
+                    type: "POST",
+                    url: "inc/sendEmail.php",
+                    data: $(form).serialize(),
+                    beforeSend: function() { 
+    
+                        sLoader.slideDown("slow");
+    
+                    },
+                    success: function(msg) {
+    
+                        // Message was sent
+                        if (msg == 'OK') {
+                            sLoader.slideUp("slow"); 
+                            $('.message-warning').fadeOut();
+                            $('#contactForm').fadeOut();
+                            $('.message-success').fadeIn();
+                        }
+                        // There was an error
+                        else {
+                            sLoader.slideUp("slow"); 
+                            $('.message-warning').html(msg);
+                            $('.message-warning').slideDown("slow");
+                        }
+    
+                    },
+                    error: function() {
+    
+                        sLoader.slideUp("slow"); 
+                        $('.message-warning').html("Something went wrong. Please try again.");
+                        $('.message-warning').slideDown("slow");
+    
+                    }
+    
+                });
+            }
+    
+        });
+    };
+
+
+   /* Back to Top
+    * ------------------------------------------------------ */
+    var ssBackToTop = function() {
+
+        var pxShow  = 500,   // height on which the button will show
+        fadeInTime  = 400,   // how slow/fast you want the button to show
+        fadeOutTime = 400,   // how slow/fast you want the button to hide
+        scrollSpeed = 300,   // how slow/fast you want the button to scroll to top. can be a value, 'slow', 'normal' or 'fast'
+        goTopButton = $(".go-top")
+
+        // Show or hide the sticky footer button
+        $(window).on('scroll', function() {
+            if ($(window).scrollTop() >= pxShow) {
+                goTopButton.fadeIn(fadeInTime);
             } else {
-                goTopButton.classList.remove("link-is-visible")
+                goTopButton.fadeOut(fadeOutTime);
             }
         });
-
-    }; // end ssBackToTop
-
+    };
 
 
-   /* initialize
+   /* Initialize
     * ------------------------------------------------------ */
     (function ssInit() {
 
         ssPreloader();
-        ssParallax();
+        ssPrettyPrint();
         ssMoveHeader();
         ssMobileMenu();
-        ssScrollSpy();
-        ssSwiper();
-        ssLightbox();
-        ssAlertBoxes();
+        ssMasonryFolio();
+        ssPhotoswipe();
+        ssSlickSlider();
+        ssWaypoints();
+        ssStatCount();
         ssSmoothScroll();
+        ssPlaceholder();
+        ssAlertBoxes();
+        ssContactForm();
         ssBackToTop();
 
     })();
 
-})(document.documentElement);
+
+})(jQuery);
