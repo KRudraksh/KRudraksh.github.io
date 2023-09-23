@@ -50,10 +50,10 @@
             <ul class="header-nav">
                 <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll"  href="#works" title="works">Works</a></li>
-                <li><a class="smoothscroll"  href="#research" title="research">Works</a></li>
+                <li><a class="smoothscroll"  href="#works" title="works">Experinece</a></li>
                 <li><a class="smoothscroll"  href="#projects" title="projects">Projects</a></li>
-                <li><a class="smoothscroll"  href="#blog" title="blog">Blog</a></li>
+                <li><a class="smoothscroll"  href="#research" title="research">Research</a></li>
+                <li><a class="smoothscroll"  href="#blog" title="blog">Blogs</a></li>
                 <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
                 
             </ul>
@@ -84,7 +84,7 @@
                 </h1>
 
                 <div class="home-content__buttons">
-                    <a href="#works" class="smoothscroll btn btn--stroke">
+                    <a href="#projects" class="smoothscroll btn btn--stroke">
                         Latest Projects
                     </a>
                     <a href="#about" class="smoothscroll btn btn--stroke">
@@ -161,12 +161,12 @@
                     <strong>Motion Planning</strong>
                     </li>
                     <li>
-                    <div class="progress percent85"><span>85%</span></div>
-                    <strong>SLAM</strong>
+                    <div class="progress percent85"><span>90%</span></div>
+                    <strong>Avionics & SOftware</strong>
                     </li>
                     <li>
                     <div class="progress percent75"><span>75%</span></div>
-                    <strong>CAD</strong>
+                    <strong>Perception & Localiisation</strong>
                     </li>   
                     <li>
                     <div class="progress percent70"><span>70%</span></div>
@@ -235,7 +235,7 @@
 
     </section> <!-- end about -->
 
-    <!-- works
+      <!-- works
     ================================================== -->
     <section id="works" class="s-works target-section">
         <div class="row about-content about-content--timeline">
@@ -255,35 +255,28 @@
                             <h5>Avionics Software and System Testing</h5>
                         </div>
                         <div class="timeline__desc">
-                            <ul>
-                                <li>Developed a predictive maintenance tool encompassing a robust flight data acquisition unit and sensors for sampling,
-                                    monitoring, and recording vital information and flight parameters from key aircraft systems and components</li>
-                                <li>Matured a modified DBSCAN based clustering algorithm for pattern recognition and analysis of fused data</li>
-                                <li>Engineered a tailored Flight Phase distribution for a flight segment, encompassing scenarios such as touch-down,
-                                    go-around, and failed take-off to effectively integrate simulated anomalies</li>
-                                <li>Devised a kalman-filter based approach to acquire data from vibration, electrical current and speed monitors</li>
-                                <li>Performed an extensive survey of flight phase analysis, report trigger codes and logic to incorporate failsafes</li>
-                            </ul>
+                            <p> Created a predictive maintenance tool with advanced data collection from aircraft systems. Developed a modified clustering algorithm for pattern recognition. Designed a customized Flight Phase distribution for various scenarios.Conducted a comprehensive survey of flight phase analysis with trigger codes and failsafes.</p>
                         </div>
                     </div> 
 
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
-                            <p class="timeline__timeframe">Jan 2023</p>
-                            <h3>WWF, India</h3>
-                            <h5>Individual Tiger Identification</h5>
+                            <p class="timeline__timeframe">Apl 2021 - Aug 2021</p>
+                            <h3>KUDAN, Tokyo</h3>
+                            <h5>Localisation for Self-driving Car</h5>
+                            <h6> <small> <a href="https://github.com/KRudraksh/KUDAN-SLAM-Localisatioin"> [code]</a></small></h6>
                         </div>
-                        <div class="timeline__desc">	
+                        <div class="timeline__desc">
                             <ul>
-                                <li>Developing a efficient pipeline for identification of both familiar and novel tigers in their natural habitat in real time</li>
-                                <li>Implemented a Robust Tiger Re-ID model and attained accuracy of 95% on the challenging ATRW dataset</li>
-                                <li>Deployed Pose-Estimation model (HRnet) specifically designed for tigers in the wild, achieving accuracy of 97%</li>
-                                <li>Utilized YoloV7 for Custom Object Detection, enabling real-time tiger detection and cropping from camera feed</li>
-                                <li>erformed Dataset Cleaning and developed a Custom Training Pipeline for the ATRW-Tiger-ReID Dataset</li>
+                                <li>Jr. Localisation Engineer in the team, providing real-time location of the vehicle, ten times more accurate than GPS</li>
+                                <li>Collaborated with engineers from KUDAN (Tokyo, Japan), for testing and improving the loop-closure techniques</li>
+                                <li>Used Lego-Loam, Interactive SLAM and PointCLoud Library on 3D lidar to stitch a Point Cloud Map</li>
+                                <li>Developed a Relocalisation Package, accurate upto 20 cm, using ICP algorithm and data-filters for higher efficiency</li>
                             </ul>
                         </div>
                     </div> <!-- end timeline__block -->
+                    
 
                 </div> <!-- end timeline -->
             </div> <!-- end left -->
@@ -294,17 +287,37 @@
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
+                            <p class="timeline__timeframe">Jan 2023</p>
+                            <h3>WWF, India</h3>
+                            <h5>Individual Tiger Identification</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <p>	Developed real-time tiger identification pipeline:
+                            <ul>
+                                <li>Achieved 95% accuracy with robust Tiger Re-ID model on ATRW dataset</li>
+                                <li>Attained 97% accuracy using HRnet Pose-Estimation for wild tigers</li>
+                                <li>Enabled real-time tiger detection and cropping with YoloV7</li>
+                                <li>Conducted dataset cleaning and established custom training pipeline for ATRW-Tiger-ReID Dataset</li>
+                            </ul>
+                            </p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
                             <p class="timeline__timeframe">Aug 2023</p>
                             <h3>Mahindra & Mahindra</h3>
                             <h5>Infrastructure Inspection</h5>
                         </div>
-                        <div class="timeline__desc">	
+                        <div class="timeline__desc">
+                            <p>	Created pipeline for solar panel and infrastructure identification:
                             <ul>
-                                <li>Developing a efficient pipeline for identification of both solar panels and infrastructure in farms and warehouses</li>
-                                <li>Utilized YoloV7 for Custom Object Detection, enabling solar-panel detection and cropping from camera feed</li>
-                                <li>Implemented a robust SuperGlue and SuperPoint feature matching technique to establish correspondence</li>
-                                <li>Used pose-estimation and triangulation to perform map-stitching, reconstructing 3D model of warehouse</li>
+                                <li>Used YoloV7 for real-time object detection</li>
+                                <li>Implemented SuperGlue and SuperPoint for feature matching</li>
+                                <li>Applied pose-estimation and triangulation for 3D warehouse reconstruction.</li>
                             </ul>
+                            </p>
                         </div>
                     </div> <!-- end timeline__block -->
 
@@ -324,23 +337,7 @@
                         </div>
                     </div> <!-- end timeline__block -->
 
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">Apl 2021 - Aug 2021</p>
-                            <h3>KUDAN, Tokyo</h3>
-                            <h5>Localisation for Self-driving Car</h5>
-                            <h6> <small> <a href="https://github.com/KRudraksh/KUDAN-SLAM-Localisatioin"> [code]</a></small></h6>
-                        </div>
-                        <div class="timeline__desc">
-                            <ul>
-                                <li>Jr. Localisation Engineer in the team, providing real-time location of the vehicle, ten times more accurate than GPS</li>
-                                <li>Collaborated with engineers from KUDAN (Tokyo, Japan), for testing and improving the loop-closure techniques</li>
-                                <li>Used Lego-Loam, Interactive SLAM and PointCLoud Library on 3D lidar to stitch a Point Cloud Map</li>
-                                <li>Developed a Relocalisation Package, accurate upto 20 cm, using ICP algorithm and data-filters for higher efficiency</li>
-                            </ul>
-                        </div>
-                    </div> <!-- end timeline__block -->
+                    
 
                     
 
@@ -352,67 +349,7 @@
     </section> <!-- end works -->
 
 
-    <section id="research" class="s-works target-section">
-        <div class="row about-content about-content--timeline">
 
-            <div class="col-full text-center">
-                <h1>My Research Work.</h1>
-            </div>
-
-            <div class="col-six tab-full left">
-                <div class="timeline">
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">Oct 2022 - Apl 2023</p>
-                            <h3>Avionics and Communication</h3>
-                            <h5>Prof. Dhwanil Shukla - IIT Bombay</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            <ul>
-                                <li>Surveyed communication protocols and servers utilized in MAVLink and PyMAVLink, allowing for the access of data and parameters from a variety of sensors and components
-                                <li>Developed custom flight modes, tailored to meet specific operational requirements within the ArduPilot firmware</li>
-                                <li>Employed LUA scripts to facilitate efficient data logging and to improve the flight termination systems (FTS)</li>
-                                <li>Building efficient Gazebo-based test beds using MAVProxy for log analysis to aid effective testing</li>
-                            </ul>
-                        </div>
-                    </div> 
-
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
-
-            <div class="col-six tab-full right">
-                <div class="timeline">
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">Aug 2021 - Oct 2021</p>
-                            <h3>Controls Architecture for Autonomous Quadrotors</h3>
-                            <h5>Prof. Dhwanil Shukla - IIT Bombay</h5>
-                        </div>
-                        <div class="timeline__desc">	
-                            <ul>
-                                <li>Senior Controls Engineer in a team consisting of 20+ members working towards Aerial Autonomy</li>
-                                <li>Applied and optimized a Data Driven Dynamics model to incorporate real world mechanical noises in simulation</li>
-                                <li>Implemented Minimum Snap Trajectory for quadrotors using jointly optimized polynomial segments</li>
-                                <li>Developed a Control-Lyapunov function based non-linear controller for robust performances against turbulence</li>
-                                <li>Formulated a high-level controller based on PID and LQR control for robust and accurate trajectory tracking</li>
-                                <li>Studied and executed real-time obstacle avoidance algorithms including Vector Field Histogram and DWA</li>
-                            </ul>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                    
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
-
-        </div> <!-- end about-content timeline -->
-
-    </section> <!-- end works -->
-
-    
     <!-- Projects
     ================================================== -->
     <section id="projects" class="s-about target-section"></section>
@@ -573,6 +510,68 @@
 
     </section> <!-- end works -->
 
+  
+    <section id="research" class="s-works target-section">
+        <div class="row about-content about-content--timeline">
+
+            <div class="col-full text-center">
+                <h1>My Research Work.</h1>
+            </div>
+
+            <div class="col-six tab-full left">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">Oct 2022 - Apl 2023</p>
+                            <h3>Avionics and Communication</h3>
+                            <h5>Prof. Dhwanil Shukla - IIT Bombay</h5>
+                        </div>
+                        <div class="timeline__desc">
+                            <ul>
+                                <li>Surveyed communication protocols and servers utilized in MAVLink and PyMAVLink, allowing for the access of data and parameters from a variety of sensors and components
+                                <li>Developed custom flight modes, tailored to meet specific operational requirements within the ArduPilot firmware</li>
+                                <li>Employed LUA scripts to facilitate efficient data logging and to improve the flight termination systems (FTS)</li>
+                                <li>Building efficient Gazebo-based test beds using MAVProxy for log analysis to aid effective testing</li>
+                            </ul>
+                        </div>
+                    </div> 
+
+                </div> <!-- end timeline -->
+            </div> <!-- end left -->
+
+            <div class="col-six tab-full right">
+                <div class="timeline">
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">Aug 2021 - Oct 2021</p>
+                            <h3>Controls Architecture for Autonomous Quadrotors</h3>
+                            <h5>Prof. Dhwanil Shukla - IIT Bombay</h5>
+                        </div>
+                        <div class="timeline__desc">	
+                            <ul>
+                                <li>Senior Controls Engineer in a team consisting of 20+ members working towards Aerial Autonomy</li>
+                                <li>Applied and optimized a Data Driven Dynamics model to incorporate real world mechanical noises in simulation</li>
+                                <li>Implemented Minimum Snap Trajectory for quadrotors using jointly optimized polynomial segments</li>
+                                <li>Developed a Control-Lyapunov function based non-linear controller for robust performances against turbulence</li>
+                                <li>Formulated a high-level controller based on PID and LQR control for robust and accurate trajectory tracking</li>
+                                <li>Studied and executed real-time obstacle avoidance algorithms including Vector Field Histogram and DWA</li>
+                            </ul>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    
+                </div> <!-- end timeline -->
+            </div> <!-- end right -->
+
+        </div> <!-- end about-content timeline -->
+
+    </section> <!-- end works -->
+
+    
 
 
     <!-- testimonials
