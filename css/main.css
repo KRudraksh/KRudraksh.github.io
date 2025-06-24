@@ -69,12 +69,12 @@
  * ------------------------------------------------------------------- */
 
 html {
-    font-size: 8px;
+    font-size: 10px;
 }
 
 @media only screen and (max-width: 400px) {
     html {
-        font-size: 7.5px;
+        font-size: 9.5px;
     }
 }
 
