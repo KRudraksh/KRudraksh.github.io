@@ -10,7 +10,7 @@
     <!--- basic page needs
     ================================================== -->
     <meta charset="utf-8">
-    <title>Rudraksh Kuchiya</title>
+    <title>Rudrakh</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -24,6 +24,14 @@
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/main.css">
 
+    <!-- Custom styles -->
+    <style>
+        /* Fix for double arrow in scroll down */
+        .home-content__scroll a::after {
+            display: none;
+        }
+    </style>
+
     <!-- script
     ================================================== -->
     <script src="js/modernizr.js"></script>
@@ -31,8 +39,8 @@
 
     <!-- favicons
     ================================================== -->
-    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 
 </head>
 
@@ -50,13 +58,11 @@
             <ul class="header-nav">
                 <li class="current"><a class="smoothscroll"  href="#home" title="home">Home</a></li>
                 <li><a class="smoothscroll"  href="#about" title="about">About</a></li>
-                <li><a class="smoothscroll"  href="#works" title="works">Experience</a></li>
-                <li><a class="smoothscroll"  href="#photos" title="projects">Photography</a></li>
+                <li><a class="smoothscroll"  href="#experience" title="experience">Experience</a></li>
+                <li><a class="smoothscroll"  href="#collaborations" title="collaborations">Collaborations</a></li>
                 <li><a class="smoothscroll"  href="#projects" title="projects">Projects</a></li>
-                <li><a class="smoothscroll"  href="#research" title="research">Research</a></li>
-                <li><a class="smoothscroll"  href="#blog" title="blog">Blogs</a></li>
+                <li><a class="smoothscroll"  href="#photography" title="photography">Photography</a></li>
                 <li><a class="smoothscroll"  href="#contact" title="contact">Contact</a></li>
-                
             </ul>
         </nav>
 
@@ -79,18 +85,15 @@
                 <h3>Hello There</h3>
 
                 <h1>
-                    I am Rudraksh Kuchiya. <br>
-                    I am a Robotics Engineer <br>
-                    based in IIT Bombay.
+                    I am Rudraksh Kuchiya.
                 </h1>
 
                 <div class="home-content__buttons">
                     <a href="#projects" class="smoothscroll btn btn--stroke">
-                        Latest Projects
+                        My Projects
                     </a>
                     <a href="#about" class="smoothscroll btn btn--stroke">
-                        More About Me
-                    </a>
+                        More about me
                 </div>
 
                 <div class="home-content__scroll">
@@ -104,21 +107,15 @@
         </div> <!-- end home-content -->
 
         <ul class="home-social">
-            <!-- <li>
-                <a href="#"><i class="im im-facebook" aria-hidden="true"></i><span>Facebook</span></a>
-            </li> -->
             <li>
-                <a href=https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09><i class="im im-twitter" aria-hidden="true"></i><span>Twiiter</span></a>
+                <a href="https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09"><i class="im im-twitter" aria-hidden="true"></i><span>Twitter</span></a>
             </li>
             <li>
-                <a href=https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
+                <a href="https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D"><i class="im im-instagram" aria-hidden="true"></i><span>Instagram</span></a>
             </li>
             <li>
-                <a href=https://github.com/KRudraksh><i class="im im-github" aria-hidden="true"></i><span>Github</span></a>
+                <a href="https://github.com/KRudraksh"><i class="im im-github" aria-hidden="true"></i><span>GitHub</span></a>
             </li>
-            <!-- <li>
-                <a href="#"><i class="im im-pinterest" aria-hidden="true"></i><span>Pinterest</span></a>
-            </li> -->
         </ul> 
         <!-- end home-social -->
 
@@ -131,8 +128,8 @@
         
         <div class="row narrow section-intro has-bottom-sep">
             <div class="col-full text-center">
-                <h1>About</h1>
-                <p class="lead"></p>
+                <!-- <h3>About</h3> -->
+                <h1>More about me</h1>
             </div>
         </div>
 
@@ -140,40 +137,40 @@
 
             <div class="col-six tab-full left">
                 <h3>Howdy!</h3>
+                
                 <p>
-                    I'm Rudraksh, a drone enthusiast who loves tinkering with Avionics Software and Systems testing. When I'm not busy crafting cool quadcopters, you might find me jamming on the drums or chasing wildlife with my camera. Oh, and I've also launched a startup exploring assisted autonomy solutions. Let's bring some passion, tech savvy, and a touch of creativity to your team!
+                I'm a recent post-graduate from IIT Bombay and a deep-tech entrepreneur and engineer with a proven track record of building and scaling frontier technology ventures. As Founder & former CEO of Bombay Dynamics, I led the development of crash-resistant UAV systems from concept through <strong>IP acquisition</strong>, forging partnerships with Indian Railways, WWF India, and Reliance Industries. My robotics leadership includes three <strong>World Championship wins</strong> across Asia, Europe, and North America, along with pioneering work in aerial manipulation, autonomous navigation, and computer vision—achieving 95% accuracy in wildlife monitoring and sub-centimeter SLAM in GPS-denied settings.
+                </p>
+                <p>
+                At IIT Bombay's UMIC, I managed a $180K+ annual R&D budget, increasing project throughput by 40%. I've delivered production-ready AI systems, architected avionics with 99.9% uptime at Airbus, and led successful pilots with Fortune 500s. With hands-on experience in both bleeding-edge engineering and business execution, I specialize in converting visionary ideas into scalable outcomes.
                 </p>
             </div>
 
             <div class="col-six tab-full right">
-                <h3>I've Got Some skills.</h3>
+                <h3>My Education</h3>
 
-                <ul class="skill-bars">
-                    <li>
-                    <div class="progress percent90"><span>90%</span></div>
-                    <strong>Mechatronics</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent85"><span>85%</span></div>
-                    <strong>Controls Engineering</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent70"><span>70%</span></div>
-                    <strong>Motion Planning</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent85"><span>90%</span></div>
-                    <strong>Avionics & SOftware</strong>
-                    </li>
-                    <li>
-                    <div class="progress percent75"><span>75%</span></div>
-                    <strong>Perception & Localiisation</strong>
-                    </li>   
-                    <li>
-                    <div class="progress percent70"><span>70%</span></div>
-                    <strong>Multi Agent Systems</strong>
-                    </li>   
-                </ul>
+                <div class="timeline">
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">June 2025</p>
+                            <h3>Masters of Technology</h3>
+                            <h5>Indian Institute of Technology Bombay</h5>
+                            <p>Design and development of an autonomous aerial manipulator</p>
+                            <a href="https://drive.google.com/file/d/1fSyML4Txv6496q7tYtyXW3Y0cXRPGM4b/view?usp=sharing" target="_blank" class="btn btn--stroke btn--small" style="margin-top: 10px;">Dissertation</a>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
+                    <div class="timeline__block">
+                        <div class="timeline__bullet"></div>
+                        <div class="timeline__header">
+                            <p class="timeline__timeframe">May 2024</p>
+                            <h3>Bachelors of Technology</h3>
+                            <h5>Indian Institute of Technology Bombay</h5>
+                            <p>Mechanical Engineering</p>
+                        </div>
+                    </div> <!-- end timeline__block -->
+                </div> <!-- end timeline -->
             </div>
 
         </div> <!-- end about-content -->
@@ -181,94 +178,64 @@
         <div class="row about-content about-content--buttons">
 
             <div class="col-six tab-full left">
-                <a href=https://drive.google.com/uc?id=1Ah7LeUBTwNXhGcdFTVIFk4qFNF3fIPh3&export=download  class="btn btn--primary full-width">Download My CV</a>
+                <a href="https://drive.google.com/uc?id=1Ah7LeUBTwNXhGcdFTVIFk4qFNF3fIPh3&export=download" class="btn btn--primary full-width">Download My CV</a>
             </div>
             <div class="col-six tab-full right">
                 <a href="mailto:rudrakshkuchiya@gmail.com" class="btn full-width">Hire Me Now</a>
             </div>
 
         </div> <!-- end about-content buttons -->
-        
-        
-        <div class="row about-content about-content--timeline">
-
-            <div class="col-full text-center">
-                <h3>My Education.</h3>
-            </div>
-
-            <div class="col-six tab-full left">
-                <div class="timeline">
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">2020 - 2025</p>
-                            <h3>Masters of Tehnology</h3>
-                            <h5>Indian Institute of Technology Bombay</h5>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
-
-            <div class="col-six tab-full right">
-                <div class="timeline">
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">2020 - 2025
-                            <h3>Bachelors of Technology</h3>
-                            <h5>Indian Institute of Technology Bombayr</h5>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
-
-        </div> <!-- end about-content timeline -->
 
     </section> <!-- end about -->
+    
 
-      <!-- works
+    <!-- experience
     ================================================== -->
-    <section id="works" class="s-works target-section">
-        <div class="row about-content about-content--timeline">
+    <section id="experience" class="s-about target-section about-content--timeline">
 
+        <div class="row">
             <div class="col-full text-center">
-                <h1>My Work Experience.</h1>
+                <h1>My Work Experience</h1>
+            </div>
             </div>
 
+        <div class="row">
             <div class="col-six tab-full left">
                 <div class="timeline">
 
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
-                            <p class="timeline__timeframe">Nov 2023 - Present</p>
+                            <p class="timeline__timeframe">Present</p>
                             <h3>Bombay Dynamics</h3>
-                            <h5>Assisted Autonomy for Industrial Inspection</h5>
+                            <h5>Founder and CEO</h5>
                         </div>
-                    </div> 
-                    
+                        <div class="timeline__desc">
+                            <p><strong>Founded and scaled</strong> a deep-tech venture specializing in <em>crash-resistant UAVs</em> with proprietary assisted autonomy technology.</p>
+                            <ul style="margin-left: 20px; margin-top: 10px; list-style-type: disc;">
+                                <li><strong>Product Innovation:</strong> Advanced inspection drones with 360° obstacle avoidance and AI-powered defect detection</li>
+                                <li><strong>Strategic Partnerships:</strong> Executed pilot projects with <em>Indian Railways</em>, <em>WWF India</em>, and <em>Reliance Industries</em></li>
+                                <li><strong>Business Achievement:</strong> Led concept-to-market validation, resulting in successful <strong>IP acquisition</strong> for mass production</li>
+                            </ul>
+                        </div>
+                    </div> <!-- end timeline__block -->
+
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
-                            <p class="timeline__timeframe">May 2023 - Jul 2023</p>
-                            <h3> <a href="works_airbus.html">Airbus &#8599</a></h3>
+                            <p class="timeline__timeframe">May 2023 - July 2023</p>
+                            <h3>Airbus</h3>
                             <h5>Avionics Software and System Testing</h5>
                         </div>
-                    </div> 
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div> 
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">Apl 2021 - Aug 2021</p>
-                            <h3> <a href="works_kudan.html"> KUDAN, Tokyo &#8599</a></h3>
-                            <h5>Localisation for Self-driving Car</h5>
+                        <div class="timeline__desc">	
+                            <p><strong>Architected</strong> a predictive maintenance system for mission-critical avionics using advanced algorithms.</p>
+                            <ul style="margin-left: 20px; margin-top: 10px; list-style-type: disc;">
+                                <li><strong>Technical Implementation:</strong> Integrated <em>clustering algorithms</em> and <em>Kalman filters</em> for real-time sensor data processing</li>
+                                <li><strong>System Reliability:</strong> Designed robust failsafe mechanisms ensuring <em>99.9% uptime</em></li>
+                                <li><strong>Cross-functional Impact:</strong> Reduced maintenance downtime by <em>15%</em> through seamless system integration</li>
+                            </ul>
                         </div>
                     </div> <!-- end timeline__block -->
-                    
 
                 </div> <!-- end timeline -->
             </div> <!-- end left -->
@@ -279,48 +246,239 @@
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
-                            <p class="timeline__timeframe">Jan 2023</p>
-                            <h3> <a href="works_wwf.html"> WWF, India &#8599 </a></h3>
-                            <h5>Individual Tiger Identification</h5>
+                            <p class="timeline__timeframe">May 2022 - April 2024</p>
+                            <h3>UMIC, IIT Bombay</h3>
+                            <h5>Head of Operations</h5>
+                        </div>
+                        <div class="timeline__desc">	
+                            <p><strong>Led strategic operations</strong> for IIT Bombay's premier Innovation Cell with <em>1.8 million INR</em> annual budget.</p>
+                            <ul style="margin-left: 20px; margin-top: 10px; list-style-type: disc;">
+                                <li><strong>Financial Management:</strong> Orchestrated budget planning and stakeholder presentations to secure continued funding</li>
+                                <li><strong>Team Building:</strong> Executed competitive recruitment with <em>5:1 selection ratio</em> (20 selected from 100+ applicants)</li>
+                                <li><strong>Operational Excellence:</strong> Implemented frameworks that increased project completion rates by <em>40%</em></li>
+                            </ul>
                         </div>
                     </div> <!-- end timeline__block -->
 
                     <div class="timeline__block">
                         <div class="timeline__bullet"></div>
                         <div class="timeline__header">
-                            <p class="timeline__timeframe">Aug 2023</p>
-                            <h3> <a href="works_mahindra.html"> Mahindra & Mahindra &#8599</a> </h3>
-                            <h5>Infrastructure Inspection</h5>
-                        </div>
-                                        </div> <!-- end timeline__block -->
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">Dec 2022 - Jan 2023</p>
-                            <h3> <a href="works_ideaforge.html">iDeaForge Technology &#8599</a></h3>
+                            <p class="timeline__timeframe">Dec 2022 - Feb 2023</p>
+                            <h3>iDeaForge Technology</h3>
                             <h5>R&D Perception</h5>
                         </div>
+                        <div class="timeline__desc">
+                            <p><strong>Pioneered</strong> next-generation drone perception systems for advanced autonomous navigation.</p>
+                            <ul style="margin-left: 20px; margin-top: 10px; list-style-type: disc;">
+                                <li><strong>Technology Integration:</strong> Combined stereo vision and thermal imaging with <em>state-of-the-art SLAM algorithms</em></li>
+                                <li><strong>Performance Enhancement:</strong> Achieved <em>sub-centimeter mapping accuracy</em> in GPS-denied environments</li>
+                                <li><strong>Product Differentiation:</strong> Improved system reliability by <em>35%</em> in adverse weather conditions</li>
+                            </ul>
+                        </div>
                     </div> <!-- end timeline__block -->
-
-                    
-
-                    
 
                 </div> <!-- end timeline -->
             </div> <!-- end right -->
 
         </div> <!-- end about-content timeline -->
 
-    </section> <!-- end works -->
+    </section> <!-- end experience -->
 
-<!-- ============================================== -->
-    <section id="photos" class="s-testimonials">
-        <div class="row narrow section-intro has-bottom-sep">
+
+    <!-- collaborations
+    ================================================== -->
+    <div id="collaborations" class="s-testimonials">
+
+        <div class="overlay"></div>
+
+        <div class="row testimonials-header">
             <div class="col-full">
-                <h1 style="color:#ffffff">Some of my Wildlife Photography.</h1>
+                <h1 class="h02">Industrial Collaborations</h1>
             </div>
         </div>
+
+        <div class="row testimonials">
+
+            <div class="col-full testimonials__slider">
+
+                <div class="testimonials__slide">
+                    <img src="images/wwf.png" alt="WWF logo" class="testimonials__avatar">
+                    <p>Developed a tiger identification system (95% accuracy) with HRNet pose estimation and YoloV7 detection, integrated with field monitoring systems.</p>
+                    <div class="testimonials__author h06">
+                        WWF India
+                        <span>Tiger Identification System | Jan 2023</span>
+                    </div>
+                </div>
+
+                <div class="testimonials__slide">
+                    <img src="images/kudan.jpeg" alt="KUDAN logo" class="testimonials__avatar">
+                    <p>Created high-precision positioning systems with Lego-LOAM framework and 3D LiDAR integration, achieving 20cm accuracy using ICP algorithms.</p>
+                    <div class="testimonials__author h06">
+                        KUDAN, Tokyo
+                        <span>Localization for Self-Driving Vehicles | Apr-Aug 2021</span>
+                        <span><a href="https://github.com/KRudraksh/KUDAN-SLAM-Localisatioin">View Codebase &#8599;</a></span>
+                    </div>
+                </div>
+
+                <div class="testimonials__slide">
+                    <img src="images/mahindra.png" alt="Mahindra logo" class="testimonials__avatar">
+                    <p>Implemented detection systems using YoloV7 with SuperGlue and SuperPoint for feature matching, creating 3D reconstruction solutions for infrastructure inspection.</p>
+                    <div class="testimonials__author h06">
+                        Mahindra & Mahindra
+                        <span>Infrastructure Inspection & 3D Reconstruction | Jul-Oct 2023</span>
+                    </div>
+                </div>
+                
+            </div> <!-- end testimonials__slider -->
+
+        </div> <!-- end testimonials -->
+
+    </div> <!-- end collaborations -->
+
+
+    <!-- projects
+    ================================================== -->
+    <section id="projects" class="s-blog target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h1>My Projects</h1>
+            </div>
+        </div>
+
+        <div class="row blog-content">
+            <div class="col-full">
+
+                <div class="blog-list block-1-2 block-tab-full">
+                    <article class="col-block">
+                                
+                        <div class="blog-date">
+                            <span>May 2024 - June 2025</span>
+                        </div>  
+                        
+                        <h2 class="h01"><a href="aerial-manipulator.html">2-DOF Aerial Manipulator</a></h2>
+                        <p>
+                        <a href="aerial-manipulator.html"><img src="images/ddp_drone.jpg" alt="Aerial Manipulator" style="width:100%; margin-bottom:15px;"></a>
+                        Designed and developed a fully autonomous aerial manipulation platform integrating a quadcopter with a 2-degree-of-freedom robotic arm. The system performs precision tasks including object detection, approach, and manipulation in complex environments.
+                        </p>
+                        
+                        <div class="blog-cat" style="margin-bottom: 10px;">
+                            <span>Masters Thesis, IIT Bombay</span>
+                        </div>
+                        
+                        <a href="aerial-manipulator.html" class="btn btn--stroke btn--small">Read More</a>
+                        
+                    </article>
+
+                    <article class="col-block">
+                                
+                        <div class="blog-date">
+                            <span>Sep 2020 - Aug 2022</span>
+                        </div>  
+                        
+                        <h2 class="h01"><a href="iarc-project.html">International Aerial Robotics Challenge 2022</a></h2>
+                        <p>
+                        <a href="iarc-project.html"><img src="images/iarc_drone.jpg" alt="IARC Challenge" style="width:100%; margin-bottom:15px;"></a>
+                        Led a team in the world's longest-running collegiate aerial robotics competition. <strong>World Champions of the Simulation Challenge 2020</strong>, hosted by AUVSI with teams from 5 continents.
+                        </p>
+                        
+                        <div class="blog-cat" style="margin-bottom: 10px;">
+                            <span>AUVSI Foundation - USA</span>
+                        </div>
+                        
+                        <a href="iarc-project.html" class="btn btn--stroke btn--small">Read More</a>
+                        
+                    </article>
+
+                    <article class="col-block">
+                        
+                        <div class="blog-date">
+                            <span>Dec 2022 - June 2023</span>
+                        </div>
+
+                        <h2 class="h01"><a href="uas-project.html">Unmanned Aerial Systems 2023</a></h2>
+                        <p>
+                        <a href="uas-project.html"><img src="images/uas_1.jpg" alt="UAS Challenge" style="width:100%; margin-bottom:15px;"></a>
+                        Led a team of nine engineers in the iMECHE UAS Challenge, winning three awards: Best Design, Scrutineering Award, and Advancement Award. Designed a 7 kg relief drone with 6 kg payload capacity for humanitarian missions.
+                        </p>
+
+                        <div class="blog-cat" style="margin-bottom: 10px;">
+                            <span>iMECHE - London, UK</span>
+                        </div>
+                        
+                        <a href="uas-project.html" class="btn btn--stroke btn--small">Read More</a>
+                    </article>
+                    <article class="col-block">
+                        
+                        <div class="blog-date">
+                            <span>Jan 2022 - May 2023</span>
+                        </div>    
+                        <h2 class="h01"><a href="uav-challenge-2023.html">UAV Challenge 2023</a></h2>
+                        <p>
+                        <a href="uav-challenge-2023.html"><img src="images/icuas_23_1.png" alt="ICUAS 2023" style="width:100%; margin-bottom:15px;"></a>
+                        Developed algorithms for a fully autonomous firefighting drone capable of avoiding obstacles in confined spaces. World Champions in the simulation stage and 2nd Runner Ups in live trials held in Warsaw, Poland.
+                        </p>
+
+                        <div class="blog-cat" style="margin-bottom: 10px;">
+                            <span>ICUAS - Warsaw, Poland</span>
+                        </div>
+                        
+                        <a href="uav-challenge-2023.html" class="btn btn--stroke btn--small">Read More</a>
+                    </article>
+                    <article class="col-block">
+                        
+                        <div class="blog-date">
+                            <span>May 2022</span>
+                        </div>    
+                        <h2 class="h01"><a href="uav-challenge-2022.html">UAV Challenge 2022</a></h2>
+                        <p>
+                        <a href="uav-challenge-2022.html"><img src="images/icuas_22.gif" alt="ICUAS 2022" style="width:100%; margin-bottom:15px;"></a>
+                        Deployed a modified Vector Field Histogram algorithm for speed-controlled obstacle avoidance in GPS-denied environments. Integrated depth information for robust evasiveness and validated across multiple simulation arenas.
+                        </p>
+
+                        <div class="blog-cat" style="margin-bottom: 10px;">
+                            <span>ICUAS - Warsaw, Poland</span>
+                        </div>
+                        
+                        <a href="uav-challenge-2022.html" class="btn btn--stroke btn--small">Read More</a>
+                    </article>
+
+                    <article class="col-block">
+                        
+                        <div class="blog-date">
+                            <span>Mar 2022</span>
+                        </div>    
+                        <h2 class="h01"><a href="drdo-challenge.html">DRDO - UAV Guided UGV Navigation Challenge</a></h2>
+                        <p>
+                        <a href="drdo-challenge.html"><img src="images/drdo_gif.gif" alt="DRDO Challenge" style="width:100%; margin-bottom:15px;"></a>
+                        Secured 3rd place nationally in the DRDO UAV-UGV challenge at Inter IIT Tech Meet 10.0. Implemented Stanley and PID controllers for UGV control with cubic and quintic spline interpolators for smooth trajectory generation and UAV feedback for precise tracking.
+                        </p>
+
+                        <div class="blog-cat" style="margin-bottom: 10px;">
+                            <span>DRDO - Inter IIT Tech Meet</span>
+                        </div>
+                        
+                        <a href="drdo-challenge.html" class="btn btn--stroke btn--small">Read More</a>
+                    </article>
+                </div> <!-- end blog-list -->
+
+            </div> <!-- end col-full -->
+        </div> <!-- end blog-content -->
+
+    </section> <!-- end projects -->
+
+
+    <!-- photography
+    ================================================== -->
+    <section id="photography" class="s-works target-section">
+
+        <div class="row narrow section-intro has-bottom-sep">
+            <div class="col-full">
+                <h1>Wildlife Photography</h1>
+                <p class="lead">A collection of wildlife photographs captured during my travels.</p>
+            </div>
+        </div>
+
         <div class="row masonry-wrap">
             <div class="masonry">
 
@@ -328,9 +486,9 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="images/wildlife/camalion.jpeg" class="thumb-link" title="The Beetle Car" data-size="1050x700">
+                            <a href="images/wildlife/camalion.jpeg" class="thumb-link" title="Chameleon" data-size="1050x700">
                                 <img src="images/wildlife/thumbnail/camalion.jpg" 
-                                        srcset="images/wildlife/thumbnail/camalion.jpg 1x, images/wildlife/thumbnail/camalion(1)    .jpg 2x" alt="">
+                                     srcset="images/wildlife/thumbnail/camalion.jpg 1x, images/wildlife/thumbnail/camalion.jpg 2x" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -345,7 +503,7 @@
                         </div>
 
                         <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>The Indian chameleon (Chamaeleo zeylanicus) is native to South Asia and known for its ability to change color. These remarkable reptiles have independently moving eyes and a specialized tongue for catching prey.</p>
                         </div>
 
                     </div> <!-- end item-folio -->
@@ -355,9 +513,9 @@
                     <div class="item-folio">
 
                         <div class="item-folio__thumb">
-                            <a href="images/wildlife/flamingo_2.jpeg" class="thumb-link" title="Lighthouse" data-size="1050x700">
+                            <a href="images/wildlife/flamingo_2.jpeg" class="thumb-link" title="Flamingo" data-size="1050x700">
                                 <img src="images/wildlife/thumbnail/flamingo_2.jpg" 
-                                        srcset="images/wildlife/thumbnail/flamingo_2.jpg 1x, images/wildlife/thumbnail/flamingo_2(1).jpg 2x" alt="">
+                                     srcset="images/wildlife/thumbnail/flamingo_2.jpg 1x, images/wildlife/thumbnail/flamingo_2.jpg 2x" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -367,12 +525,12 @@
                                 Flamingo
                             </h3>
                             <p class="item-folio__cat">
-                                Las Palmad de Gran Canaria, Spain
+                                Las Palmas de Gran Canaria, Spain
                             </p>
                         </div>
 
                         <div class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Flamingos are distinctive wading birds known for their vibrant pink coloration, which comes from beta-carotene in their diet of algae, shrimp, and other crustaceans. They often stand on one leg to conserve body heat.</p>
                         </div>
 
                     </div> <!-- end item-folio -->
@@ -384,7 +542,7 @@
                         <div class="item-folio__thumb">
                             <a href="images/wildlife/monkey.jpg" class="thumb-link" data-size="1050x700">
                                 <img src="images/wildlife/thumbnail/monkey.jpg" 
-                                        srcset="images/wildlife/thumbnail/monkey.jpg 1x, images/wildlife/thumbnail/monkey(1).jpg 2x" alt="">
+                                     srcset="images/wildlife/thumbnail/monkey.jpg 1x, images/wildlife/thumbnail/monkey.jpg 2x" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -398,12 +556,8 @@
                             </p>
                         </div>
 
-                        <!-- <a href="https://www.behance.net/" class="item-folio__project-link" title="Project link">
-                            <i class="im im-link"></i>
-                        </a> -->
-
                         <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>The Southern Talapoin Monkey is one of Africa's smallest primates. These social creatures live in groups near water and are known for their agility in trees and their diverse vocal communication.</p>
                         </span>
 
                     </div> <!-- end item-folio -->
@@ -415,7 +569,7 @@
                         <div class="item-folio__thumb">
                             <a href="images/wildlife/macaw.jpeg" class="thumb-link" data-size="1050x700">
                                 <img src="images/wildlife/thumbnail/macaw.jpg"
-                                        srcset="images/wildlife/thumbnail/macaw.jpg 1x, images/wildlife/thumbnail/macaw(1).jpg 2x" alt="">
+                                     srcset="images/wildlife/thumbnail/macaw.jpg 1x, images/wildlife/thumbnail/macaw.jpg 2x" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -430,7 +584,7 @@
                         </div>
 
                         <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Macaws are colorful, long-tailed members of the parrot family. Known for their intelligence and social nature, they can mimic human speech and use their strong beaks to crack nuts and seeds in their native rainforest habitats.</p>
                         </span>
 
                     </div> <!-- end item-folio -->
@@ -442,7 +596,7 @@
                         <div class="item-folio__thumb">
                             <a href="images/wildlife/snake.jpeg" class="thumb-link" data-size="1050x700">
                                 <img src="images/wildlife/thumbnail/snake.jpg"
-                                        srcset="images/wildlife/thumbnail/snake.jpg 1x, images/wildlife/thumbnail/snake(1).jpg 2x" alt="">
+                                     srcset="images/wildlife/thumbnail/snake.jpg 1x, images/wildlife/thumbnail/snake.jpg 2x" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -457,7 +611,7 @@
                         </div>
 
                         <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Snakes are legless reptiles with elongated bodies and remarkable adaptations. They can detect prey through heat-sensing pits, swallow food whole, and some species possess venom used for hunting and defense.</p>
                         </span>
 
                     </div> <!-- end item-folio -->
@@ -469,7 +623,7 @@
                         <div class="item-folio__thumb">
                             <a href="images/wildlife/squirrel_2.jpg" class="thumb-link" data-size="1050x700">
                                 <img src="images/wildlife/thumbnail/squirrel_2.jpg"
-                                        srcset="images/wildlife/thumbnail/squirrel_2.jpg 1x, images/wildlife/thumbnail/squirrel_2(1).jpg 2x" alt="">
+                                     srcset="images/wildlife/thumbnail/squirrel_2.jpg 1x, images/wildlife/thumbnail/squirrel_2.jpg 2x" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -484,7 +638,7 @@
                         </div>
 
                         <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>The Indian Palm Squirrel is recognized by its distinctive stripes running down its back. These agile rodents are common in urban areas of India, where they're often considered sacred and can be seen gathering nuts and seeds.</p>
                         </span>
 
                     </div> <!-- end item-folio -->
@@ -496,7 +650,7 @@
                         <div class="item-folio__thumb">
                             <a href="images/wildlife/ostrich.jpeg" class="thumb-link" data-size="1050x700">
                                 <img src="images/wildlife/thumbnail/ostrich.jpg"
-                                        srcset="images/wildlife/thumbnail/ostrich.jpg 1x, images/wildlife/thumbnail/ostrich(1).jpg 2x" alt="">
+                                     srcset="images/wildlife/thumbnail/ostrich.jpg 1x, images/wildlife/thumbnail/ostrich.jpg 2x" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -511,7 +665,7 @@
                         </div>
 
                         <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>The Common Emu is the second-largest living bird by height. Native to Australia, these flightless birds can sprint at speeds up to 30 mph. They have distinctive blue skin on their necks and are known for their booming calls.</p>
                         </span>
 
                     </div> <!-- end item-folio -->
@@ -523,7 +677,7 @@
                         <div class="item-folio__thumb">
                             <a href="images/wildlife/RKN_7125.jpeg" class="thumb-link" data-size="1050x700">
                                 <img src="images/wildlife/thumbnail/RKN_7125.jpg"
-                                        srcset="images/wildlife/thumbnail/RKN_7125.jpg 1x, images/wildlife/thumbnail/RKN_7125(1).jpg 2x" alt="">
+                                     srcset="images/wildlife/thumbnail/RKN_7125.jpg 1x, images/wildlife/thumbnail/RKN_7125.jpg 2x" alt="">
                                 <span class="shadow-overlay"></span>
                             </a>
                         </div>
@@ -538,7 +692,7 @@
                         </div>
 
                         <span class="item-folio__caption">
-                            <p>Vero molestiae sed aut natus excepturi. Et tempora numquam. Temporibus iusto quo.Unde dolorem corrupti neque nisi.</p>
+                            <p>Conures are small to medium-sized parrots known for their playful personalities and vibrant plumage. These intelligent birds are popular pets due to their social nature, vocal abilities, and long lifespans of 20+ years.</p>
                         </span>
 
                     </div> <!-- end item-folio -->
@@ -546,224 +700,47 @@
 
             </div>
         </div> <!-- end masonry -->
-    </div>
+
+    </section> <!-- end photography -->
 
 
-    <!-- Projects
+    <!-- contact
     ================================================== -->
-    <section id="projects" class="s-about target-section"></section>
-        <div class="row about-content about-content--timeline">
-
-            <div class="col-full text-center">
-                <h1 style="color:#ffffff">My Projects.</h1>
-            </div>
-
-            <div class="col-six tab-full left">
-                <div class="timeline">
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe" style="color:#ffffff">Sep 2020 - Aug 2022</p>
-                            <h3> <a href="project_iarc2022.html" style="color:#ffffff"  > International Aerial Robotics Challenge 2022 &#x1F517 </a> </h3>
-                            <h5 style="color:#ffffff">AUVSI Foundation</h5>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                    <div class="timeline__block" >
-                        <div class="timeline__bullet" ></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe" style="color:#ffffff">Dec 2022 - Jun 2023</p>
-                            <h3> <a href="project_uas2023.html" style="color:#ffffff"> Unmanned Aerial Systems 2023 &#x1F517 </a> </h3>
-                            <h5 style="color:#ffffff">iMECHE, London, Uinted Kingdom </h5>
-                        </div>
-                    </div> 
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe" style="color:#ffffff">Mar 2022</p>
-                            <h3> <a href="project_adptive.html" style="color:#ffffff"> Attitude Control of Spacecraft &#x1F517 </a> </h3>
-                            <h5 style="color:#ffffff">Prof. Sukumar Srikant, Dept of Systems and Controls Engineering</h5>
-                        </div>
-                        <div class="timeline__desc">
-                            
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                   
-
-                    
-
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
-
-            <div class="col-six tab-full right">
-                <div class="timeline">
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe" style="color:#ffffff">Jan 2022 - May 2023</p>
-                            <h3> <a href="project_icuas2023.html" style="color:#ffffff">UAV Challenge 2023 &#x1F517 </a> </h3>
-                            <h5 style="color:#ffffff">ICUAS 2023 Warsaw, Poland</h5>
-                        </div>
-                        <div class="timeline__desc">	
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe" style="color:#ffffff">May 2022</p>
-                            <h3> <a href="project_icuas2022.html" style="color:#ffffff"> UAVChallenge 2022 &#x1F517</a> </h3>
-                            <h5 style="color:#ffffff">International Conference on Unmanned Aircraft Systems</h5>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe" style="color:#ffffff">Mar 2022</p>
-                            <h3> <a href="project_drdo.html" style="color:#ffffff"> DRDO - UAV Guided UGV Navigation Challenge &#x1F517</a> </h3>
-                            <h5 style="color:#ffffff">Inter IIT Tech Meet 10.0</h5>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                    
-
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
-
-        </div> <!-- end about-content timeline -->
-
-    </section> <!-- end works -->
-
-  
-    <section id="research" class="s-works target-section">
-        <div class="row about-content about-content--timeline">
-
-            <div class="col-full text-center">
-                <h1>My Research Work.</h1>
-            </div>
-
-            <div class="col-six tab-full left">
-                <div class="timeline">
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">Oct 2022 - Apl 2023</p>
-                            <h3> <a href="research_avionics.html">Avionics and Communication &#8599</a> </h3>
-                            <h5>Prof. Dhwanil Shukla - IIT Bombay</h5>
-                        </div>
-                    </div> 
-
-                </div> <!-- end timeline -->
-            </div> <!-- end left -->
-
-            <div class="col-six tab-full right">
-                <div class="timeline">
-
-                    <div class="timeline__block">
-                        <div class="timeline__bullet"></div>
-                        <div class="timeline__header">
-                            <p class="timeline__timeframe">Aug 2021 - Oct 2021</p>
-                            <h3> <a href="research_controls.html"> Controls Architecture for Autonomous Quadrotors &#8599 </a> </h3>
-                            <h5>Prof. Dhwanil Shukla - IIT Bombay</h5>
-                        </div>
-                    </div> <!-- end timeline__block -->
-
-                    
-                </div> <!-- end timeline -->
-            </div> <!-- end right -->
-
-        </div> <!-- end about-content timeline -->
-
-    </section> <!-- end works -->
-
-    
-
-
-    <!-- testimonials
-    ================================================== -->
-    <section id="blog"></section>
-    <div class="s-testimonials">
-
-        <div class="overlay"></div>
-        <div class="shadow-overlay"></div>
-        <div class="row narrow section-intro has-bottom-sep">
-            <div class="col-full">
-                <h3 style="color:#ffffff;">Journal</h3>
-                <h1 style="color:#ffffff;">Latest From The Blog.</h1>
-            </div>
-        </div>
-
-        <div class="row blog-content">
-            <div class="col-full">
-
-                <div class="blog-list block-1-2 block-tab-full">
-                    <article class="col-block">
-                                
-                        <div class="blog-date">
-                            <a href="blog-single.html" style="color:#ffffff">Aug 15, 2023</a>
-                        </div>  
-                        
-                        <h2 class="h01"><a href="blog-single.html" style="color:#ffffff">An Comprehensive Guide to Navigating Internship Applications with Confidence! 🚀.</a></h2>
-
-                        <!-- <div class="blog-cat">
-                                <a href="blog.html">Apping</a><a href="blog.html">Guide</a>
-                        </div> -->
-
-                        
-                    </article>
-                    <article class="col-block">
-                                
-                        <div class="blog-date">
-                            <a href="blog-single.html" style="color:#ffffff">Aug 29, 2023</a>
-                        </div>  
-                        
-                        <h2 class="h01"><a href="why_the_heck.html" style="color:#ffffff">Why the heck am I even doing this?</a></h2>
-
-                        <!-- <div class="blog-cat">
-                                <a href="blog.html">Apping</a><a href="blog.html">Guide</a>
-                        </div> -->
-
-                        
-                    </article>
-                    
-                    
-                </div> <!-- end blog-list -->
-
-            </div> <!-- end col-full -->
-            
-        </div> <!-- end blog-content -->
-    </div> <!-- end s-testimonials -->
-    
-
-    <!-- s-stats -->
-    <section id="contact" class="s-contact target-section">
+    <section id="contact" class="s-contact target-section" data-parallax="scroll" data-image-src="images/count-bg.jpg" data-natural-width=3000 data-natural-height=2000 data-position-y=center>
 
         <div class="overlay"></div>
 
         <div class="row narrow section-intro">
             <div class="col-full">
-                <h3>Contact</h3>
                 <h1>Say Hello.</h1>
             </div>
         </div>
 
         <div class="row contact__main">
-            <div class="col-four tab-full contact__infos">
-                <h4 class="h06">Phone</h4>
-                <p>Phone: (+91) 9826951787
-                </p>
+            <div class="col-full tab-full contact__infos">
+                <div class="contact-info-container" style="text-align: center; max-width: 600px; margin: 0 auto; padding: 2rem; background-color: rgba(0, 0, 0, 0.5); border-radius: 8px;">
+                    <div class="contact-info-block" style="margin-bottom: 2rem;">
+                        <h4 class="h06" style="font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="im im-phone" aria-hidden="true" style="margin-right: 1rem;"></i>Phone
+                        </h4>
+                        <p style="font-size: 1.8rem; color: #ffffff;">+91 9826951787</p>
+                    </div>
 
-                <h4 class="h06">Email</h4>
-                <a href="mailto:rudrakshkuchiya@gmail.com" style="color:#ffffff">rudrakshkuchiya@gmail.com</a>
+                    <div class="contact-info-block" style="margin-bottom: 2rem;">
+                        <h4 class="h06" style="font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="im im-mail" aria-hidden="true" style="margin-right: 1rem;"></i>Email
+                        </h4>
+                        <p style="font-size: 1.8rem; color: #ffffff;">rudrakshkuchiya@gmail.com</p>
+                    </div>
 
+                    <div class="contact-info-block">
+                        <h4 class="h06" style="font-size: 2rem; margin-bottom: 1rem;">
+                            <i class="im im-location" aria-hidden="true" style="margin-right: 1rem;"></i>Address
+                        </h4>
+                        <p style="font-size: 1.8rem; color: #ffffff;">IIT Bombay, Mumbai</p>
+                    </div>
+                </div>
             </div>
-
         </div>
 
     </section> <!-- end s-contact -->
@@ -775,42 +752,24 @@
         <div class="row">
             <div class="col-full">
 
-                <div class="footer-logo">
-                    <a class="footer-site-logo" href="#0" style="color:#ffffff">Rudraksh Kuchiya</a>
-                </div>
-
                 <ul class="footer-social">
-                    <li><a href=https://github.com/KRudraksh>
-                        <i class="im im-github" aria-hidden="true"></i>
-                        <span>Github</span>
-                    </a></li>
-                    <li><a href=https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09>
+                    <li><a href="https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09">
                         <i class="im im-twitter" aria-hidden="true"></i>
                         <span>Twitter</span>
                     </a></li>
-                    <li><a href=https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D>
+                    <li><a href="https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
                         <i class="im im-instagram" aria-hidden="true"></i>
                         <span>Instagram</span>
+                    </a></li>
+                    <li><a href="https://github.com/KRudraksh">
+                        <i class="im im-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
                     </a></li>
                 </ul>
                     
             </div>
         </div>
 
-        <div class="row footer-bottom">
-
-            <div class="col-twelve">
-                <div class="copyright">
-                    <span>© Copyright Hola 2017</span> 
-                    <span>Design by <a href="https://www.styleshout.com/">styleshout</a>, edited by Rudraksh Kuchiya</span>	
-                </div>
-
-                <div class="go-top">
-                <a class="smoothscroll" title="Back to Top" href="#top"><i class="im im-arrow-up" aria-hidden="true"></i></a>
-                </div>
-            </div>
-
-        </div> <!-- end footer-bottom -->
 
     </footer> <!-- end footer -->
 

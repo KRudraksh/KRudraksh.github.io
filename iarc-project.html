@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>International Aerial Robotics Challenge - Rudraksh Kuchiya</title>
+    <meta name="description" content="International Aerial Robotics Challenge 2022 - World Champions of the Simulation Challenge 2020">
+    <meta name="author" content="Rudraksh Kuchiya">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html#home" title="home">Home</a></li>
+                <li><a href="index.html#about" title="about">About</a></li>
+                <li><a href="index.html#experience" title="experience">Experience</a></li>
+                <li><a href="index.html#collaborations" title="collaborations">Collaborations</a></li>
+                <li class="current"><a href="index.html#projects" title="projects">Projects</a></li>
+                <li><a href="index.html#photography" title="photography">Photography</a></li>
+                <li><a href="index.html#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <article class="blog-single">
+
+        <!-- page header/blog hero
+        ================================================== -->
+        <div class="page-header page-header--single page-hero" style="background-image:url(images/count-bg.jpg)">
+        
+            <div class="row page-header__content narrow">
+                <article class="col-full">
+                    <div class="page-header__info">
+                        <div class="page-header__cat">
+                            <a href="index.html#projects">Projects</a><a href="#">AUVSI Foundation</a>
+                        </div>
+                    </div>
+                    <h1 class="page-header__title">
+                        <a href="#0" title="">
+                            International Aerial Robotics Challenge 2022
+                        </a>
+                    </h1>
+                    <ul class="page-header__meta">
+                        <li class="date">Sep 2020 - Aug 2022</li>
+                        <li class="author">
+                            By
+                            <span>Rudraksh Kuchiya</span>
+                        </li>
+                    </ul>
+                    
+                </article>
+            </div>
+    
+        </div> <!-- end page-header -->
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+
+                <p class="lead">Led a team in the world's longest-running collegiate aerial robotics competition focused on pushing the boundaries of autonomous aerial systems. <strong>World Champions of the Simulation Challenge 2020</strong>, hosted by AUVSI with teams from 5 continents.</p>
+                
+                <p>
+                <img src="images/iarc_drone.jpg" alt="IARC Drone" style="max-width: 70%; display: block; margin: 0 auto;">
+                </p>
+
+                <h2>Mission Overview</h2>
+
+                <p>The Mothership takes off along with the daughtership in tow, and starts taking laps around the Pylon, using GPS Global Waypoint navigation. After the Laps are over, the Daughtership separates from the Mothership, takes off, and starts looking for the Mast. It does so by moving around the mast, and using Machine Learning to detect the Mast Board. It then uses OpenCV to detect the LED Navigation lights, and then orients itself according to their position and orientation.</p>
+
+                <p>After it has a good estimate of the mast board location, it approaches the module and starts the "coarse tuning" maneuver, which enables better controls of the end effector. Then, the "fine tuning" maneuver starts, which runs at a faster rate than the "coarse tuning maneuver", and that updates just the end-effector position according to the position of the module. Both of these maneuvers take the module location from the Machine Learning Module, and use PID Controllers to controls the actuators involved.</p>
+
+                <p>Once the Module is aligned with the end-effector for a specified minimum amount of time, the end-effector executes the "replacement" maneuver, where it grabs the mast, removes the module, and then places another one in place of it. All this while, the Mothership is returning home. It started that as soon as the daughtership separated from it.</p>
+
+                <div style="margin-bottom: 3rem; margin-top: 2rem; text-align: center;">
+                    <video width="70%" controls style="display: block; margin: 0 auto;">
+                        <source src="images/iarc_video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <h2>Technical Contributions</h2>
+
+                <h3>Controls</h3>
+
+                <ul>
+                    <li>Designed and implemented a Back-stepping based Sliding mode controller to conduct laps</li>
+                    <li>Built a PID acceleration controller to track dynamic objects using feedback from RGBD camera</li>
+                    <li>Ideated and configured control packages for a Custom Robotic Gripper for aerial manipulation</li>
+                    <li>Designed an IMU-based algorithm for free-fall detection and self-stabilizing using mavros and Ardupilot</li>
+                    <li>Developed a custom Finite-State-Machine as central Autopilot for decision making & autonomy</li>
+                </ul>
+                
+                <h3>Localization</h3>
+
+                <ul>
+                    <li>Setup Real-Time Kinematic (RTK) base station for precise navigation, achieving RTK fix accuracy</li>
+                    <li>Implemented ORB-SLAM2 using ZED2 RGBD Camera and establishing pose estimation</li>
+                </ul>
+                
+                <h3>Mechatronics</h3>
+
+                <ul>
+                    <li>Optimized the CAD; manufactured and assembled a drone of size 2m x 2m with a pressure-sensor actuator-based scissor model</li>
+                    <li>Designed a custom Robotic Gripper to perform onboard dexterous manipulations</li>
+                    <li>Developed a low-power decoupling-mechanism to conduct mid-air deployment of daughter drone</li>
+                    <li>Designed landing-legs for a drone of 15 kg to maintain integrity when maneuvering at high speeds</li>
+                </ul>
+
+                <h3>Project Structure</h3>
+
+                <p>The project workspace (iarc_ws) contains all of the code along with other packages:</p>
+
+                <h4>Controls</h4>
+                <p>This folder consists of the Major Autopilot code used for Guidance, Navigation and Replacement of the module, along with a few utilities that assist in the same. It also has the urdf Description packages for the Joint Controllers used in our mechanism.</p>
+                <ul>
+                    <li><strong>autopilot.py</strong> - This is the master file that contains the mission logic and handles the GNC of the Mothership and the decision making logic for the whole mission.</li>
+                    <li><strong>child_node.py</strong> - This is the file that controls the Daughtership, and the replacement maneuver. It consists of many classes, each built to suit specific purposes.</li>
+                </ul>
+
+                <h4>Machine Learning</h4>
+                <p>This folder consists of the Machine Learning code used to detect the mast and eventually the module from a respectable distance, to assist in the maneuvering and navigation of the drone towards the module.</p>
+
+                <h4>Localization</h4>
+                <p>This folder consists of the ORBSLAM2 package that is used by the daughtership for localization when it detaches from the mothership, and is close to the mast. It also has a custom python script that carries out the calculations and handles the frame conversions required to accurately predict the current position.</p>
+
+                <p class="blog-content__tags">
+                    <span>Project Links</span>
+
+                    <span class="blog-content__tag-list">
+                        <a href="https://github.com/KRudraksh/IARC-Mission-9-2021" target="_blank">GitHub Repository</a>
+                        <a href="https://drive.google.com/file/d/13asmtXsMvHFcX9LnZS8vVsVJrVEayyP1/view" target="_blank">Journal Publication</a>
+                    </span>
+                </p>
+
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__all">
+                        <a href="index.html#projects" class="btn btn--primary">
+                            Back to All Projects
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </article>
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+                <ul class="footer-social">
+                    <li><a href="https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href="https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                    <li><a href="https://github.com/KRudraksh">
+                        <i class="im im-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> <!-- end footer -->
+
+
+    <div id="preloader"> 
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

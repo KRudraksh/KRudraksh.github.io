@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>UAV Challenge 2022 - Rudraksh Kuchiya</title>
+    <meta name="description" content="UAV Challenge 2022 - International Conference on Unmanned Aircraft Systems (ICUAS)">
+    <meta name="author" content="Rudraksh Kuchiya">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html#home" title="home">Home</a></li>
+                <li><a href="index.html#about" title="about">About</a></li>
+                <li><a href="index.html#experience" title="experience">Experience</a></li>
+                <li><a href="index.html#collaborations" title="collaborations">Collaborations</a></li>
+                <li class="current"><a href="index.html#projects" title="projects">Projects</a></li>
+                <li><a href="index.html#photography" title="photography">Photography</a></li>
+                <li><a href="index.html#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <article class="blog-single">
+
+        <!-- page header/blog hero
+        ================================================== -->
+        <div class="page-header page-header--single page-hero" style="background-image:url(images/count-bg.jpg)">
+        
+            <div class="row page-header__content narrow">
+                <article class="col-full">
+                    <div class="page-header__info">
+                        <div class="page-header__cat">
+                            <a href="index.html#projects">Projects</a><a href="#">ICUAS</a>
+                        </div>
+                    </div>
+                    <h1 class="page-header__title">
+                        <a href="#0" title="">
+                            UAV Challenge 2022
+                        </a>
+                    </h1>
+                    <ul class="page-header__meta">
+                        <li class="date">May 2022</li>
+                        <li class="author">
+                            By
+                            <span>Rudraksh Kuchiya</span>
+                        </li>
+                    </ul>
+                    
+                </article>
+            </div>
+    
+        </div> <!-- end page-header -->
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+
+                <p class="lead">Developed algorithms for a fully autonomous firefighting drone capable of avoiding obstacles in GPS-denied environments for the International Conference on Unmanned Aircraft Systems (ICUAS) UAV Challenge 2022. The project focused on implementing advanced obstacle avoidance techniques and payload delivery systems.</p>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap;">
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/icuas_22.gif" alt="UAV Challenge 2022" style="max-width: 70%; object-fit: contain;">
+                    </div>
+                </div>
+
+                <h2>Project Overview</h2>
+
+                <p>The ICUAS 2022 UAV Challenge focused on developing autonomous drones for firefighting applications in GPS-denied environments. Our team created a sophisticated drone system capable of navigating through complex environments while avoiding obstacles, detecting fire sources, and delivering payloads accurately. The challenge required robust obstacle avoidance, precise navigation, and effective payload delivery mechanisms.</p>
+
+                <div style="margin: 2rem 0; text-align: center;">
+                    <div style="display: inline-block; max-width: 60%;">
+                        <img src="images/icuas_22_2.png" alt="UAV Challenge Navigation" style="width: 100%; object-fit: contain;">
+                        <p style="font-style: italic; margin-top: 0.5rem;">Autonomous navigation and obstacle avoidance visualization</p>
+                    </div>
+                </div>
+
+                <h2>Technical Achievements</h2>
+
+                <h3>Advanced Obstacle Avoidance</h3>
+                <ul>
+                    <li>Deployed a modified version of the Vector Field Histogram (VFH) algorithm for speed-controlled obstacle avoidance</li>
+                    <li>Implemented dynamic path planning to navigate through complex environments</li>
+                    <li>Optimized the avoidance algorithm for real-time performance in confined spaces</li>
+                </ul>
+
+                <h3>Depth-Based Navigation</h3>
+                <ul>
+                    <li>Utilized onboard depth information to incorporate robust evasiveness in the obstacle avoidance module</li>
+                    <li>Developed algorithms for accurate distance estimation to obstacles</li>
+                    <li>Implemented multi-layered safety mechanisms to prevent collisions</li>
+                </ul>
+
+                <h3>System Integration</h3>
+                <ul>
+                    <li>Integrated avoidance, detection, and payload delivery modules into a cohesive system</li>
+                    <li>Validated performance across multiple simulation arenas with varying complexity</li>
+                    <li>Created a modular architecture for easy adaptation to different scenarios</li>
+                </ul>
+
+                <h2>Technical Approach</h2>
+
+                <h3>Vector Field Histogram Implementation</h3>
+                <p>Our modified VFH algorithm improved upon the classic approach in several ways:</p>
+                <ul>
+                    <li>Dynamic adjustment of detection thresholds based on UAV speed</li>
+                    <li>Integration of depth information for more accurate obstacle representation</li>
+                    <li>Implementation of speed control mechanisms that slow down in complex environments and speed up in open spaces</li>
+                </ul>
+
+                <p>The VFH algorithm works by creating a polar histogram of obstacle densities around the UAV. By analyzing this histogram, the algorithm identifies potential gaps or valleys that represent safe directions for navigation. Our modifications allowed for more responsive behavior in dynamic environments.</p>
+
+                <h3>Depth Information Processing</h3>
+                <p>The depth information processing pipeline included:</p>
+                <ul>
+                    <li>Filtering and noise reduction of depth camera data</li>
+                    <li>Segmentation of the depth field to identify potential obstacles</li>
+                    <li>Classification of obstacles based on size, proximity, and location</li>
+                    <li>Integration of depth data with the VFH algorithm for enhanced obstacle avoidance</li>
+                </ul>
+
+                <h3>Payload Delivery System</h3>
+                <p>For the firefighting application, we developed a payload delivery system that:</p>
+                <ul>
+                    <li>Accurately identified target locations for payload deployment</li>
+                    <li>Calculated optimal release points considering UAV motion and payload ballistics</li>
+                    <li>Implemented feedback mechanisms to verify successful delivery</li>
+                </ul>
+
+                <blockquote>
+                    <p>The integration of advanced obstacle avoidance with precise payload delivery created a robust autonomous system capable of operating effectively in challenging, GPS-denied environments.</p>
+                </blockquote>
+
+                <h2>Simulation and Validation</h2>
+
+                <p>Our system was rigorously tested across multiple simulation environments:</p>
+                <ul>
+                    <li>Simple obstacle courses for baseline performance evaluation</li>
+                    <li>Complex indoor environments with narrow passages and dead ends</li>
+                    <li>Dynamic scenarios with moving obstacles to test reactive capabilities</li>
+                    <li>Realistic firefighting scenarios with multiple targets and obstacles</li>
+                </ul>
+
+                <p>The validation process confirmed the system's ability to:</p>
+                <ul>
+                    <li>Navigate safely through confined spaces</li>
+                    <li>Maintain stable flight in the presence of obstacles</li>
+                    <li>Accurately deliver payloads to target locations</li>
+                    <li>Adapt to different environmental conditions</li>
+                </ul>
+
+                <p class="blog-content__tags">
+                    <span>Project Links</span>
+
+                    <span class="blog-content__tag-list">
+                        <a href="https://github.com/KRudraksh/ICUAS-UAV-Challenge" target="_blank">GitHub Repository</a>
+                    </span>
+                </p>
+
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__all">
+                        <a href="index.html#projects" class="btn btn--primary">
+                            Back to All Projects
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </article>
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+                <ul class="footer-social">
+                    <li><a href="https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href="https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                    <li><a href="https://github.com/KRudraksh">
+                        <i class="im im-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> <!-- end footer -->
+
+
+    <div id="preloader"> 
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

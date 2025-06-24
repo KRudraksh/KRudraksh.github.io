@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>DRDO - UAV Guided UGV Challenge - Rudraksh Kuchiya</title>
+    <meta name="description" content="DRDO - UAV Guided UGV Challenge - Inter IIT Tech Meet 10.0">
+    <meta name="author" content="Rudraksh Kuchiya">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html#home" title="home">Home</a></li>
+                <li><a href="index.html#about" title="about">About</a></li>
+                <li><a href="index.html#experience" title="experience">Experience</a></li>
+                <li><a href="index.html#collaborations" title="collaborations">Collaborations</a></li>
+                <li class="current"><a href="index.html#projects" title="projects">Projects</a></li>
+                <li><a href="index.html#photography" title="photography">Photography</a></li>
+                <li><a href="index.html#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <article class="blog-single">
+
+        <!-- page header/blog hero
+        ================================================== -->
+        <div class="page-header page-header--single page-hero" style="background-image:url(images/count-bg.jpg)">
+        
+            <div class="row page-header__content narrow">
+                <article class="col-full">
+                    <div class="page-header__info">
+                        <div class="page-header__cat">
+                            <a href="index.html#projects">Projects</a><a href="#">DRDO</a>
+                        </div>
+                    </div>
+                    <h1 class="page-header__title">
+                        <a href="#0" title="">
+                            DRDO - UAV Guided UGV Navigation Challenge
+                        </a>
+                    </h1>
+                    <ul class="page-header__meta">
+                        <li class="date">Mar 2022</li>
+                        <li class="author">
+                            By
+                            <span>Rudraksh Kuchiya</span>
+                        </li>
+                    </ul>
+                    
+                </article>
+            </div>
+    
+        </div> <!-- end page-header -->
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+
+                <p class="lead">Secured 3rd place nationally in the DRDO - UAV guided UGV challenge at Inter IIT Tech Meet 10.0, competing against 12 other renowned IITs. The project focused on UAV-assisted terrain scanning for UGV trajectory identification and tracking, implementing advanced control systems and trajectory planning algorithms.</p>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 3rem; flex-wrap: wrap;">
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                        <img src="images/drdo_gif.gif" alt="DRDO Challenge" style="max-width: 70%; object-fit: contain;">
+                    </div>
+                </div>
+
+                <h2>Project Overview</h2>
+
+                <p>The DRDO UAV Guided UGV Challenge focused on developing systems where unmanned aerial vehicles (UAVs) guide unmanned ground vehicles (UGVs) through complex terrain. Our team created a sophisticated system that used aerial surveillance to map terrain and guide ground vehicles along optimal paths, implementing advanced control algorithms for precise navigation and obstacle avoidance.</p>
+
+                <div style="margin: 2rem 0; text-align: center;">
+                    <div style="display: inline-block; max-width: 60%;">
+                        <img src="images/inter_iit_2.jpeg" alt="UGV Navigation" style="width: 100%; object-fit: contain;">
+                        <p style="font-style: italic; margin-top: 0.5rem;">UGV navigating through complex terrain with UAV guidance</p>
+                    </div>
+                </div>
+
+                <h2>Technical Achievements</h2>
+
+                <h3>Control Systems</h3>
+                <ul>
+                    <li>Deployed Stanley controller for precise steering commands to the UGV</li>
+                    <li>Implemented PID controller to manage throttle inputs and maintain optimal speed</li>
+                    <li>Integrated control systems with UAV feedback for real-time path corrections</li>
+                </ul>
+
+                <h3>Trajectory Generation</h3>
+                <ul>
+                    <li>Utilized cubic and quintic spline interpolators to generate smooth trajectories from waypoints</li>
+                    <li>Optimized path planning for minimal jerk and acceleration changes</li>
+                    <li>Incorporated radius of curvature-based velocity adaptation for dynamic feasibility</li>
+                </ul>
+
+                <h3>UAV-UGV Integration</h3>
+                <ul>
+                    <li>Established robust communication between aerial and ground vehicles using ROS</li>
+                    <li>Implemented Ardupilot with MAVROS for reliable control and telemetry</li>
+                    <li>Developed algorithms to eliminate disturbances in UGV tracking based on UAV feedback</li>
+                </ul>
+
+                <div style="margin: 2rem 0; text-align: center;">
+                    <div style="display: inline-block; max-width: 80%;">
+                        <img src="images/inter_iit.gif" alt="System Demonstration" style="width: 100%; object-fit: contain;">
+                        <p style="font-style: italic; margin-top: 0.5rem;">Simulation of the UAV-UGV coordination system</p>
+                    </div>
+                </div>
+
+                <h2>Technical Approach</h2>
+
+                <h3>Path Planning and Trajectory Generation</h3>
+                <p>Our approach to path planning involved several key components:</p>
+                <ul>
+                    <li>Initial waypoint generation based on UAV terrain scanning</li>
+                    <li>Spline-based interpolation between waypoints to ensure smooth transitions</li>
+                    <li>Optimization of trajectories to minimize control effort and maintain dynamic feasibility</li>
+                </ul>
+
+                <p>The use of cubic and quintic spline interpolators was crucial for generating paths that the UGV could follow efficiently. These interpolators ensured continuity in position, velocity, and acceleration profiles, resulting in smoother vehicle motion and reduced mechanical stress.</p>
+
+                <h3>Stanley Controller Implementation</h3>
+                <p>The Stanley controller was selected for its robust performance in steering control for ground vehicles. Our implementation included:</p>
+                <ul>
+                    <li>Cross-track error minimization for accurate path following</li>
+                    <li>Heading error compensation to maintain proper vehicle orientation</li>
+                    <li>Adaptive gain tuning based on vehicle speed and path characteristics</li>
+                </ul>
+
+                <h3>Velocity Adaptation</h3>
+                <p>To ensure safe and efficient navigation, we implemented a velocity adaptation system that:</p>
+                <ul>
+                    <li>Analyzed the path's radius of curvature in real-time</li>
+                    <li>Adjusted vehicle speed to maintain stability during turns</li>
+                    <li>Accelerated on straightaways and decelerated for sharp curves</li>
+                    <li>Considered vehicle dynamics constraints to prevent skidding or tipping</li>
+                </ul>
+
+                <h3>UAV Feedback Integration</h3>
+                <p>The UAV provided critical feedback for the UGV navigation system:</p>
+                <ul>
+                    <li>Real-time position updates to correct for UGV localization drift</li>
+                    <li>Terrain analysis to identify potential obstacles or challenging sections</li>
+                    <li>Path replanning capabilities when deviations or obstacles were detected</li>
+                </ul>
+
+                <blockquote>
+                    <p>The integration of aerial and ground vehicles created a robust navigation system capable of adapting to complex environments and maintaining precise tracking even in challenging conditions.</p>
+                </blockquote>
+
+                <h2>Results and Impact</h2>
+
+                <p>Our team's solution demonstrated exceptional performance in the competition:</p>
+                <ul>
+                    <li>Secured 3rd place nationally among 12 prestigious IITs</li>
+                    <li>Achieved high accuracy in UGV path following with minimal deviations</li>
+                    <li>Successfully demonstrated robust performance in various simulated environments</li>
+                </ul>
+
+                <p>The technology developed for this challenge has potential applications in:</p>
+                <ul>
+                    <li>Military reconnaissance and supply missions</li>
+                    <li>Disaster response and search operations</li>
+                    <li>Agricultural automation and precision farming</li>
+                    <li>Remote exploration of hazardous environments</li>
+                </ul>
+
+                <p class="blog-content__tags">
+                    <span>Project Links</span>
+
+                    <span class="blog-content__tag-list">
+                        <a href="https://github.com/KRudraksh/DRDO-Inter-IIT-UAV-UGV-Challenge" target="_blank">GitHub Repository</a>
+                    </span>
+                </p>
+
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__all">
+                        <a href="index.html#projects" class="btn btn--primary">
+                            Back to All Projects
+                        </a>
+                    </div>
+                </div>
+
+            </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </article>
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+                <ul class="footer-social">
+                    <li><a href="https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href="https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                    <li><a href="https://github.com/KRudraksh">
+                        <i class="im im-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a></li>
+                </ul>
+            </div>
+        </div>
+    </footer> <!-- end footer -->
+
+
+    <div id="preloader"> 
+        <div id="loader"></div>
+    </div>
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

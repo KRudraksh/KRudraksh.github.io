@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<!--[if lt IE 9 ]><html class="no-js oldie" lang="en"> <![endif]-->
+<!--[if IE 9 ]><html class="no-js oldie ie9" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+
+    <!--- basic page needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <title>2-DOF Aerial Manipulator | Rudraksh</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- mobile specific metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS
+    ================================================== -->
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <!-- script
+    ================================================== -->
+    <script src="js/modernizr.js"></script>
+    <script src="js/pace.min.js"></script>
+
+    <!-- favicons
+    ================================================== -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body id="top">
+
+    <!-- header
+    ================================================== -->
+    <header class="s-header">
+
+        <nav class="header-nav-wrap">
+            <ul class="header-nav">
+                <li><a href="index.html" title="home">Home</a></li>
+                <li><a href="index.html#about" title="about">About</a></li>
+                <li><a href="index.html#experience" title="experience">Experience</a></li>
+                <li><a href="index.html#collaborations" title="collaborations">Collaborations</a></li>
+                <li class="current"><a href="index.html#projects" title="projects">Projects</a></li>
+                <li><a href="index.html#photography" title="photography">Photography</a></li>
+                <li><a href="index.html#contact" title="contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <a class="header-menu-toggle" href="#0"><span>Menu</span></a>
+
+    </header> <!-- end s-header -->
+
+
+    <!-- page header
+    ================================================== -->
+    <section class="page-header page-hero" style="background-image:url(images/ddp_drone.jpg)">
+        
+        <div class="row page-header__content">
+            <article class="col-full">
+
+                <div class="page-header__info">
+                    <div class="page-header__cat">
+                        <a href="#0">Masters Thesis</a><a href="#0">IIT Bombay</a>
+                    </div>
+                </div>
+
+                <h1 class="page-header__title">
+                    <a href="#0" title="">
+                        2-DOF Aerial Manipulator
+                    </a>
+                </h1>
+                <p>May 2024 - June 2025</p>
+            </article>
+        </div>
+
+    </section> <!-- end page-header -->
+
+
+    <!-- blog content
+    ================================================== -->
+    <div class="blog-content-wrap">
+
+        <div class="row blog-content">
+            <div class="col-full blog-content__main">
+
+                <h2>Project Overview</h2>
+
+                <p>This project presents the design, development, and testing of a fully autonomous aerial manipulation platform integrating a quadcopter with a 2-degree-of-freedom (2-DOF) robotic arm. Conceived and executed at IIT Bombay, the system was engineered to perform precision tasks such as object detection, approach, and manipulation in complex environments. By combining aerial mobility with robotic dexterity, this research pushes the frontier of autonomous systems capable of interacting physically with their surroundings.</p>
+
+                <p>
+                    <a href="https://drive.google.com/file/d/1fSyML4Txv6496q7tYtyXW3Y0cXRPGM4b/view?usp=sharing" target="_blank" class="btn btn--stroke">
+                        View Dissertation
+                    </a>
+                </p>
+
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__nav">
+                        <div class="blog-content__prev">
+                            <a href="index.html#projects" rel="prev">
+                                <span>Back to Projects</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>System Architecture</h2>
+
+                <p>The platform comprises three core subsystems:</p>
+                <ul>
+                    <li>A custom-designed manipulator arm</li>
+                    <li>A quadcopter powered by the Pixhawk Cube Orange flight controller with ArduPilot firmware</li>
+                    <li>A computer vision system based on the Intel RealSense depth camera</li>
+                </ul>
+
+                <p>A key innovation in this work is the development of a vibration-isolated camera mounting system, which enhances image clarity during flight by mitigating motion-induced blur. Custom deblurring algorithms were implemented onboard to ensure reliable ArUco marker detection under noisy conditions, achieving an effective frame rate of 11.2 fps with centimeter-level localization accuracy.</p>
+
+                <h2>Hardware Development</h2>
+
+                <div class="blog-content__image" style="text-align: center; margin: 20px 0;">
+                    <img src="images/ddp_drone.jpg" alt="2-DOF Aerial Manipulator" style="width:70%; max-width: 600px; box-shadow: 0 4px 10px rgba(0,0,0,0.15); border-radius: 4px;">
+                    <p style="font-style: italic; margin-top: 10px; font-size: 0.9em; color: #666;">2-DOF Aerial Manipulator Platform</p>
+                </div>
+
+                <p>A multi-stage hardware development approach was used for the manipulator design. Initial iterations suffered from asymmetric torque distribution and excessive vibration. These were resolved through a dual-link torque-balanced structure and by repositioning the arm below the quadcopter frame to avoid propeller interference. The gripper design also evolved from a gear-driven configuration with low torque transmission to a high-torque, asymmetric design using MG995 servos, significantly improving grasp reliability during dynamic flight.</p>
+
+                <p>Mechanical constraints were mathematically derived to ensure safe integration of the arm without destabilizing the aerial platform. This included ensuring the manipulator's reach did not interfere with propellers or affect ground clearance, while maintaining the center of mass within tolerable limits for stable flight.</p>
+
+                <h2>Autonomous Operation</h2>
+
+                <p>To support autonomous operation, a Raspberry Pi onboard computer was interfaced with the flight controller via MAVROS. The system architecture supported autonomous object approach, target centering, and visual servoing. Vision algorithms were designed for both global and local target acquisition using GPS and image-based feedback. RTK-GPS integration brought down positional errors to less than 10 cm, enabling precise approach maneuvers in real-world outdoor environments.</p>
+
+                <h2>Flight Testing & Challenges</h2>
+
+                <p>Flight testing highlighted the system's capabilities and limitations. While stable hovering and successful gripping of lightweight objects were achieved, sustained operations at above 90% thrust revealed platform instability when the manipulator was extended. This pointed to the need for further optimization in weight distribution and thrust-to-weight ratio. The research recommends future migration to a hexcopter platform for better load management and dynamic stability.</p>
+
+                <p>A notable challenge addressed was image degradation due to drone vibrations. A custom-designed 6-DOF vibration isolation system for the camera, in combination with advanced deblurring algorithms, proved crucial in maintaining visual clarity. Tests showed that without these interventions, marker detection failed entirely during flight, whereas the enhanced setup achieved reliable tracking and pose estimation.</p>
+
+                <h2>Conclusion & Applications</h2>
+
+                <p>Ultimately, this project contributes a novel, integrated approach to aerial manipulation by fusing structural design, dynamic modeling, embedded control, and computer vision. Its applications extend across fields such as satellite servicing, aerial inspection, disaster response, and autonomous construction. The modularity of the design and its ROS-based software stack make it a reusable testbed for further experimentation in multi-robot coordination, visual navigation, and onboard autonomy.</p>
+
+                <p>This work lays a foundational step toward scalable, robust aerial robots that can perceive, decide, and interact with their environment in real-time — from research labs to industrial and space applications.</p>
+
+                <div class="blog-content__pagenav">
+                    <div class="blog-content__nav">
+                        <div class="blog-content__prev">
+                            <a href="index.html#projects" rel="prev">
+                                <span>Back to Projects</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- end blog-content__main -->
+        </div> <!-- end blog-content -->
+
+    </div> <!-- end blog-content-wrap -->
+
+
+    <!-- footer
+    ================================================== -->
+    <footer>
+        <div class="row">
+            <div class="col-full">
+
+                <ul class="footer-social">
+                    <li><a href="https://twitter.com/KuchiyaRudraksh?t=R0BToPBvflPg86idOFtNWg&s=09">
+                        <i class="im im-twitter" aria-hidden="true"></i>
+                        <span>Twitter</span>
+                    </a></li>
+                    <li><a href="https://instagram.com/rudrakshkuchiya?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D">
+                        <i class="im im-instagram" aria-hidden="true"></i>
+                        <span>Instagram</span>
+                    </a></li>
+                    <li><a href="https://github.com/KRudraksh">
+                        <i class="im im-github" aria-hidden="true"></i>
+                        <span>GitHub</span>
+                    </a></li>
+                </ul>
+                    
+            </div>
+        </div>
+    </footer> <!-- end footer -->
+
+
+    <!-- Java Script
+    ================================================== -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html> 
